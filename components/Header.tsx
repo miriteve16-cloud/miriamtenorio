@@ -1,15 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "/sobre-mi", label: "Sobre Mí" },
-  { href: "/libro", label: "Mi Libro" },
+  { href: "/", label: "Inicio" },
+  { href: "/sobre-mi", label: "Sobre mí" },
   { href: "/conferencias", label: "Conferencias" },
+  { href: "/libro", label: "Mi Libro" },
   { href: "/blog", label: "Blog" },
   { href: "/prensa", label: "Prensa" },
-  { href: "/contacto", label: "Contacto" },
 ];
 
 export default function Header() {
@@ -17,134 +16,77 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <header
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 50,
-        transition: "all 0.3s ease",
-        background: scrolled
-          ? "rgba(10, 10, 15, 0.95)"
-          : "transparent",
-        backdropFilter: scrolled ? "blur(20px)" : "none",
-        borderBottom: scrolled
-          ? "1px solid rgba(124, 58, 237, 0.2)"
-          : "none",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 24px",
-          height: "72px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        {/* Logo */}
+    <header style={{
+      position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
+      background: scrolled ? "rgba(10,10,10,0.97)" : "#0A0A0A",
+      borderBottom: "1px solid rgba(201,169,110,0.15)",
+      backdropFilter: "blur(12px)",
+      transition: "all 0.3s ease",
+    }}>
+      <div style={{
+        maxWidth: "1200px", margin: "0 auto", padding: "0 32px",
+        height: "72px", display: "flex", alignItems: "center", justifyContent: "space-between",
+      }}>
         <Link href="/" style={{ textDecoration: "none" }}>
-          <span
-            style={{
-              fontSize: "1.25rem",
-              fontWeight: 700,
-              background: "linear-gradient(135deg, #a78bfa, #7c3aed)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
+          <span style={{
+            fontFamily: "'Playfair Display', Georgia, serif",
+            fontSize: "1.25rem", fontWeight: 700, color: "#C9A96E", letterSpacing: "0.02em",
+          }}>
             Miriam Tenorio
           </span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav style={{ display: "flex", gap: "32px", alignItems: "center" }}>
+        <nav style={{ display: "flex", alignItems: "center", gap: "36px" }} className="desktop-nav">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              style={{
-                color: "rgba(245, 240, 255, 0.8)",
-                textDecoration: "none",
-                fontSize: "0.9rem",
-                fontWeight: 500,
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) =>
-                ((e.target as HTMLElement).style.color = "#a78bfa")
-              }
-              onMouseLeave={(e) =>
-                ((e.target as HTMLElement).style.color =
-                  "rgba(245, 240, 255, 0.8)")
-              }
+            <Link key={link.href} href={link.href} style={{
+              color: "#A89880", textDecoration: "none", fontSize: "0.85rem",
+              fontWeight: 500, letterSpacing: "0.05em", transition: "color 0.2s",
+              fontFamily: "'Inter', sans-serif",
+            }}
+              onMouseEnter={e => (e.target as HTMLElement).style.color = "#F5F0E8"}
+              onMouseLeave={e => (e.target as HTMLElement).style.color = "#A89880"}
             >
               {link.label}
             </Link>
           ))}
-          <Link href="/contacto" className="btn-primary" style={{ fontSize: "0.85rem", padding: "10px 24px" }}>
-            Trabajemos Juntas
+          <Link href="/contacto" className="btn-primary" style={{ fontSize: "0.8rem", padding: "10px 24px" }}>
+            Contratame
           </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          style={{
-            display: "none",
-            background: "none",
-            border: "none",
-            color: "#a78bfa",
-            cursor: "pointer",
-          }}
-          className="mobile-menu-btn"
-          aria-label="Menú"
-        >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        <button onClick={() => setMenuOpen(!menuOpen)} className="mobile-btn"
+          style={{ display: "none", background: "none", border: "none", color: "#C9A96E", cursor: "pointer", fontSize: "1.5rem" }}>
+          {menuOpen ? "✕" : "☰"}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
-        <div
-          style={{
-            background: "rgba(10, 10, 15, 0.98)",
-            borderTop: "1px solid rgba(124, 58, 237, 0.2)",
-            padding: "20px 24px",
-          }}
-        >
+        <div style={{ background: "#0A0A0A", borderTop: "1px solid #2A2520", padding: "20px 32px" }}>
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              style={{
-                display: "block",
-                color: "rgba(245, 240, 255, 0.8)",
-                textDecoration: "none",
-                padding: "12px 0",
-                borderBottom: "1px solid rgba(124, 58, 237, 0.1)",
-                fontSize: "1rem",
-              }}
-            >
+            <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)} style={{
+              display: "block", color: "#A89880", textDecoration: "none",
+              padding: "12px 0", borderBottom: "1px solid #2A2520", fontSize: "0.95rem",
+            }}>
               {link.label}
             </Link>
           ))}
+          <Link href="/contacto" onClick={() => setMenuOpen(false)} className="btn-primary"
+            style={{ display: "inline-block", marginTop: "16px", fontSize: "0.85rem" }}>
+            Contratame
+          </Link>
         </div>
       )}
 
       <style>{`
         @media (max-width: 768px) {
-          nav { display: none !important; }
-          .mobile-menu-btn { display: block !important; }
+          .desktop-nav { display: none !important; }
+          .mobile-btn { display: block !important; }
         }
       `}</style>
     </header>

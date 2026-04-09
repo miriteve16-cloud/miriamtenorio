@@ -1,149 +1,85 @@
 import Link from "next/link";
-import { Instagram, Youtube, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer
-      style={{
-        background: "rgba(10, 10, 15, 0.98)",
-        borderTop: "1px solid rgba(124, 58, 237, 0.2)",
-        padding: "60px 24px 30px",
-      }}
-    >
+    <footer style={{ background: "#0A0A0A", borderTop: "1px solid #2A2520", padding: "64px 32px 32px" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "40px",
-            marginBottom: "50px",
-          }}
-        >
-          {/* Brand */}
+        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: "48px", marginBottom: "48px" }}>
           <div>
-            <h3
-              style={{
-                fontSize: "1.3rem",
-                fontWeight: 700,
-                background: "linear-gradient(135deg, #a78bfa, #7c3aed)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                marginBottom: "16px",
-              }}
-            >
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.4rem", color: "#C9A96E", marginBottom: "16px" }}>
               Miriam Tenorio Velazco
             </h3>
-            <p style={{ color: "rgba(245,240,255,0.6)", fontSize: "0.9rem", lineHeight: 1.7, marginBottom: "20px" }}>
-              Empresaria, autora y coach de negocios. <br />
-              Inspirando a mujeres a emprender y volver a empezar con propósito.
+            <p style={{ color: "#A89880", fontSize: "0.9rem", lineHeight: 1.8, marginBottom: "8px" }}>
+              Doctora en Administración Pública
             </p>
-            <div style={{ display: "flex", gap: "16px" }}>
-              <a
-                href="https://www.instagram.com/miriamtenorio1"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "#a78bfa", transition: "color 0.2s" }}
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://youtube.com/@miriamtenoriovelazco"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "#a78bfa", transition: "color 0.2s" }}
-                aria-label="YouTube"
-              >
-                <Youtube size={20} />
-              </a>
-              <a
-                href="https://www.tiktok.com/@miritenorio"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "#a78bfa", fontSize: "0.85rem", fontWeight: 600 }}
-                aria-label="TikTok"
-              >
-                TikTok
-              </a>
-              <a
-                href="https://www.facebook.com/share/1EFHUshA6C/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "#a78bfa" }}
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-            </div>
+            <p style={{ color: "#A89880", fontSize: "0.9rem", lineHeight: 1.8, marginBottom: "20px" }}>
+              Autora · Conferencista · Docente UAGro
+            </p>
+            <p style={{ color: "#A89880", fontSize: "0.85rem", fontStyle: "italic", borderLeft: "2px solid #C9A96E", paddingLeft: "16px" }}>
+              "Todo lo que se cree, se crea."
+            </p>
           </div>
 
-          {/* Links */}
           <div>
-            <h4 style={{ color: "#c4b5fd", fontWeight: 600, marginBottom: "16px", fontSize: "0.9rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>
-              Navegación
+            <h4 style={{ color: "#F5F0E8", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "20px", fontFamily: "'Inter', sans-serif" }}>
+              Navegacion
             </h4>
             {[
-              { href: "/sobre-mi", label: "Sobre Mí" },
-              { href: "/libro", label: "Mi Libro" },
+              { href: "/sobre-mi", label: "Sobre mi" },
               { href: "/conferencias", label: "Conferencias" },
+              { href: "/libro", label: "Mi Libro" },
               { href: "/blog", label: "Blog" },
               { href: "/prensa", label: "Prensa" },
               { href: "/contacto", label: "Contacto" },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                style={{
-                  display: "block",
-                  color: "rgba(245,240,255,0.6)",
-                  textDecoration: "none",
-                  marginBottom: "10px",
-                  fontSize: "0.9rem",
-                  transition: "color 0.2s",
-                }}
-              >
-                {link.label}
-              </Link>
+            ].map(l => (
+              <Link key={l.href} href={l.href} style={{
+                display: "block", color: "#A89880", textDecoration: "none",
+                marginBottom: "10px", fontSize: "0.9rem", transition: "color 0.2s",
+              }}>{l.label}</Link>
             ))}
           </div>
 
-          {/* Contacto */}
           <div>
-            <h4 style={{ color: "#c4b5fd", fontWeight: 600, marginBottom: "16px", fontSize: "0.9rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+            <h4 style={{ color: "#F5F0E8", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "20px", fontFamily: "'Inter', sans-serif" }}>
               Contacto
             </h4>
-            <p style={{ color: "rgba(245,240,255,0.6)", fontSize: "0.9rem", marginBottom: "10px" }}>
-              📧 miriteve16@gmail.com
-            </p>
-            <p style={{ color: "rgba(245,240,255,0.6)", fontSize: "0.9rem", marginBottom: "20px" }}>
-              📱 WhatsApp: +52 744 175 7547
-            </p>
-            <Link href="/contacto" className="btn-primary" style={{ fontSize: "0.85rem", padding: "10px 24px" }}>
-              Enviar Mensaje
-            </Link>
+            <p style={{ color: "#A89880", fontSize: "0.9rem", marginBottom: "10px" }}>miriteve16@gmail.com</p>
+            <a href="https://wa.me/527441757547" target="_blank" rel="noopener noreferrer"
+              style={{ color: "#A89880", textDecoration: "none", fontSize: "0.9rem", display: "block", marginBottom: "20px" }}>
+              +52 744 175 7547
+            </a>
+            <div style={{ display: "flex", gap: "16px" }}>
+              {[
+                { href: "https://www.instagram.com/miriamtenorio1", label: "IG" },
+                { href: "https://youtube.com/@miriamtenoriovelazco", label: "YT" },
+                { href: "https://www.tiktok.com/@miritenorio", label: "TK" },
+              ].map(s => (
+                <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" style={{
+                  color: "#A89880", textDecoration: "none", fontSize: "0.8rem", fontWeight: 600,
+                  border: "1px solid #2A2520", padding: "6px 10px", transition: "all 0.2s",
+                }}>{s.label}</a>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div
-          style={{
-            borderTop: "1px solid rgba(124, 58, 237, 0.15)",
-            paddingTop: "24px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: "12px",
-          }}
-        >
-          <p style={{ color: "rgba(245,240,255,0.4)", fontSize: "0.8rem" }}>
+        <div style={{ borderTop: "1px solid #2A2520", paddingTop: "24px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+          <p style={{ color: "#A89880", fontSize: "0.8rem" }}>
             © 2025 Miriam Tenorio Velazco. Todos los derechos reservados.
           </p>
-          <p style={{ color: "rgba(245,240,255,0.4)", fontSize: "0.8rem" }}>
-            Hecho con 💜 en México
+          <p style={{ color: "#2A2520", fontSize: "0.8rem" }}>
+            Mexico
           </p>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          footer > div > div:first-of-type {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </footer>
   );
 }

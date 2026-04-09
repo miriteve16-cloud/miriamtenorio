@@ -1,378 +1,346 @@
 "use client";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Mic, Star, Heart, TrendingUp } from "lucide-react";
 
 const stats = [
-  { value: "10", label: "Meses de transformación", icon: "🌱" },
-  { value: "1er", label: "Libro publicado", icon: "📚" },
-  { value: "∞", label: "Vidas impactadas", icon: "💜" },
-  { value: "100%", label: "Desde la autenticidad", icon: "✨" },
+  { value: "15+", label: "Años de trayectoria" },
+  { value: "1", label: "Libro publicado en Amazon" },
+  { value: "Dra.", label: "Administración Pública" },
+  { value: "2", label: "Estados impactados" },
 ];
 
-const valores = [
-  {
-    icon: <Heart size={28} color="#a78bfa" />,
-    title: "Fe y Propósito",
-    desc: "Creo que cada persona fue creada con un propósito único. La fe es la base de toda transformación real.",
-  },
-  {
-    icon: <TrendingUp size={28} color="#a78bfa" />,
-    title: "Disciplina Real",
-    desc: "El crecimiento no viene de la motivación pasajera, sino de la disciplina diaria y las decisiones conscientes.",
-  },
-  {
-    icon: <Star size={28} color="#a78bfa" />,
-    title: "Verdad que Libera",
-    desc: "Solo desde la honestidad radical podemos reconstruir. La verdad duele, pero también sana y libera.",
-  },
+const filosofia = [
+  { num: "01", titulo: "Fe antes que estrategia", desc: "Dios, verdad y paz. De ahí no me muevo." },
+  { num: "02", titulo: "Identidad antes que imagen", desc: "Quien eres determina lo que construyes." },
+  { num: "03", titulo: "Criterio antes que opinión", desc: "La formación doctoral da criterio. El criterio da dirección." },
+  { num: "04", titulo: "Disciplina antes que motivación", desc: "El crecimiento viene de la constancia diaria." },
+  { num: "05", titulo: "Propósito antes que dinero", desc: "El impacto real es consecuencia de vivir con propósito." },
+  { num: "06", titulo: "Autenticidad antes que perfección", desc: "Mi historia no es perfecta. Pero es real." },
+];
+
+const conferencias = [
+  { titulo: "Liderazgo femenino con propósito y estrategia", tags: ["Liderazgo", "Mujeres"] },
+  { titulo: "El método METAMORFOSIS: transformación personal aplicada", tags: ["Desarrollo Personal", "Transformación"] },
+  { titulo: "Emprendimiento social con identidad y fe", tags: ["Emprendimiento", "Propósito"] },
+  { titulo: "Gestión pública y liderazgo institucional", tags: ["Sector Público", "Liderazgo"] },
+  { titulo: "De tocar fondo a construir desde Dios: mi historia", tags: ["Testimonio", "Fe"] },
+  { titulo: "Marca personal para mujeres en posiciones de poder", tags: ["Marca Personal", "Autoridad"] },
+];
+
+const timeline = [
+  { year: "2005", desc: "Primer lugar nacional, Encuentro de Mercadotecnia y Publicidad" },
+  { year: "2008", desc: "Directora General, Revista CÓDIGOS Tlaxcala" },
+  { year: "2021", desc: "Candidata a Diputada Local Distrito 7, Acapulco — MORENA" },
+  { year: "2021–2023", desc: "Directora General de Acciones Prioritarias, Secretaría de Bienestar Guerrero" },
+  { year: "2023", desc: "Docente Universidad Autónoma de Guerrero (UAGro)" },
+  { year: "2025", desc: 'Autora "Mujer, eres la obra del Maestro" — Amazon KDP' },
+  { year: "Presente", desc: "Doctorado en Administración Pública en proceso" },
 ];
 
 const testimonios = [
-  {
-    texto: "Miriam me enseñó que el primer paso es el más difícil, pero también el más poderoso. Su historia me dio el valor que necesitaba.",
-    nombre: "Ana L.",
-    cargo: "Emprendedora",
-  },
-  {
-    texto: "Pensé que era demasiado tarde para empezar de nuevo. Miriam me demostró con su vida que nunca lo es.",
-    nombre: "Carmen R.",
-    cargo: "Empresaria",
-  },
-  {
-    texto: "El libro de Miriam llegó a mis manos en el momento exacto. Fue como si alguien finalmente entendiera lo que yo vivía.",
-    nombre: "Patricia M.",
-    cargo: "Lectora",
-  },
+  { texto: "Miriam me enseñó que el primer paso es el más difícil pero también el más poderoso.", nombre: "Ana L.", cargo: "Emprendedora" },
+  { texto: "Pensé que era demasiado tarde para empezar de nuevo. Miriam me demostró que nunca lo es.", nombre: "Carmen R.", cargo: "Empresaria" },
+  { texto: "Su libro llegó a mis manos en el momento exacto.", nombre: "Patricia M.", cargo: "Lectora" },
 ];
 
 export default function HomePage() {
   return (
     <div style={{ paddingTop: "72px" }}>
+
       {/* HERO */}
-      <section
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          padding: "80px 24px",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        {/* Background gradient */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(124,58,237,0.15) 0%, transparent 70%)",
-            pointerEvents: "none",
-          }}
-        />
+      <section style={{
+        minHeight: "calc(100vh - 72px)",
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        alignItems: "center",
+        maxWidth: "1200px",
+        margin: "0 auto",
+        padding: "80px 32px",
+        gap: "80px",
+      }}>
+        <div>
+          <span style={{
+            display: "inline-block",
+            border: "1px solid rgba(201,169,110,0.3)",
+            color: "#C9A96E",
+            fontSize: "0.75rem",
+            fontWeight: 500,
+            letterSpacing: "0.1em",
+            padding: "8px 16px",
+            marginBottom: "32px",
+            fontFamily: "'Inter', sans-serif",
+          }}>
+            Doctora en Administración Pública &nbsp;·&nbsp; Autora &nbsp;·&nbsp; Conferencista &nbsp;·&nbsp; Docente
+          </span>
 
-        <div style={{ maxWidth: "820px", position: "relative", zIndex: 1 }}>
-          <div
-            style={{
-              display: "inline-block",
-              background: "rgba(124,58,237,0.15)",
-              border: "1px solid rgba(167,139,250,0.3)",
-              borderRadius: "50px",
-              padding: "8px 20px",
-              marginBottom: "28px",
-              fontSize: "0.85rem",
-              color: "#c4b5fd",
-              letterSpacing: "0.05em",
-            }}
-          >
-            ✨ Coach de Negocios · Autora · Conferencista
-          </div>
-
-          <h1
-            style={{
-              fontSize: "clamp(2.5rem, 7vw, 5rem)",
-              fontWeight: 800,
-              lineHeight: 1.1,
-              marginBottom: "12px",
-              color: "#f5f0ff",
-            }}
-          >
-            Miriam{" "}
-            <span
-              style={{
-                background: "linear-gradient(135deg, #a78bfa, #7c3aed, #c4b5fd)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Tenorio
-            </span>
+          <h1 style={{
+            fontFamily: "'Playfair Display', Georgia, serif",
+            fontSize: "clamp(2.5rem, 5vw, 4rem)",
+            fontWeight: 700,
+            color: "#F5F0E8",
+            lineHeight: 1.15,
+            marginBottom: "24px",
+          }}>
+            Transformación con propósito, criterio y dirección.
           </h1>
 
-          <p
-            style={{
-              fontSize: "clamp(1rem, 2.5vw, 1.4rem)",
-              color: "rgba(245,240,255,0.7)",
-              marginBottom: "20px",
-              fontStyle: "italic",
-              fontWeight: 300,
-            }}
-          >
-            &ldquo;Mi avance no es visible para todos… pero es real para mí.&rdquo;
+          <div className="divider" />
+
+          <p style={{ color: "#A89880", fontSize: "1.05rem", lineHeight: 1.8, marginBottom: "40px", maxWidth: "500px" }}>
+            Liderazgo femenino con base académica, experiencia institucional y fe. Acompañando a mujeres a construir desde su identidad más poderosa.
           </p>
 
-          <p
-            style={{
-              fontSize: "clamp(1rem, 2vw, 1.2rem)",
-              color: "rgba(245,240,255,0.65)",
-              lineHeight: 1.8,
-              marginBottom: "48px",
-              maxWidth: "640px",
-              margin: "0 auto 48px",
-            }}
-          >
-            Empresaria, autora y mujer en proceso de transformación. Después de tocar fondo, decidió reconstruir su vida desde la fe, la disciplina y la verdad. Hoy inspira a otros a crecer, emprender y volver a empezar con propósito.
-          </p>
-
-          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/libro" className="btn-primary" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <BookOpen size={18} /> Mi Libro
+          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+            <Link href="/contacto" className="btn-primary">
+              Contratame para una conferencia
             </Link>
-            <Link
-              href="/contacto"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                padding: "14px 32px",
-                borderRadius: "50px",
-                border: "1px solid rgba(167,139,250,0.4)",
-                color: "#c4b5fd",
-                textDecoration: "none",
-                fontWeight: 600,
-                fontSize: "0.95rem",
-                transition: "all 0.3s",
-              }}
-            >
-              Trabajemos Juntas <ArrowRight size={16} />
+            <Link href="/sobre-mi" className="btn-secondary">
+              Conoce mi historia
             </Link>
           </div>
         </div>
-      </section>
 
-      {/* STATS */}
-      <section className="section-dark" style={{ padding: "60px 24px" }}>
-        <div
-          style={{
-            maxWidth: "1000px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-            gap: "32px",
-            textAlign: "center",
-          }}
-        >
-          {stats.map((stat, i) => (
-            <div key={i}>
-              <div style={{ fontSize: "2rem", marginBottom: "8px" }}>{stat.icon}</div>
-              <div
-                style={{
-                  fontSize: "2.2rem",
-                  fontWeight: 800,
-                  background: "linear-gradient(135deg, #a78bfa, #7c3aed)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  marginBottom: "6px",
-                }}
-              >
-                {stat.value}
-              </div>
-              <div style={{ color: "rgba(245,240,255,0.6)", fontSize: "0.9rem" }}>
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* SOBRE MÍ (preview) */}
-      <section style={{ padding: "100px 24px" }}>
-        <div
-          style={{
-            maxWidth: "1100px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "60px",
-            alignItems: "center",
-          }}
-        >
-          <div>
-            <div style={{ color: "#a78bfa", fontSize: "0.85rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "16px" }}>
-              Mi Historia
-            </div>
-            <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "#f5f0ff", lineHeight: 1.2, marginBottom: "24px" }}>
-              De tocar fondo a{" "}
-              <span style={{ background: "linear-gradient(135deg, #a78bfa, #c4b5fd)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                reconstruir todo
-              </span>
-            </h2>
-            <p style={{ color: "rgba(245,240,255,0.7)", lineHeight: 1.8, marginBottom: "16px", fontSize: "1.05rem" }}>
-              Hubo un momento en mi vida donde lo perdí casi todo. Pero fue precisamente en ese fondo donde encontré algo que nadie me podía quitar: mi fe y mi voluntad de levantarme.
-            </p>
-            <p style={{ color: "rgba(245,240,255,0.7)", lineHeight: 1.8, marginBottom: "32px", fontSize: "1.05rem" }}>
-              Dejé de tomar. Recuperé a mi familia. Escribí mi primer libro. Y aprendí que el primer paso siempre empieza en silencio, sin que nadie lo vea.
-            </p>
-            <Link href="/sobre-mi" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "#a78bfa", textDecoration: "none", fontWeight: 600 }}>
-              Conoce mi historia completa <ArrowRight size={16} />
-            </Link>
-          </div>
-
-          <div
-            style={{
-              background: "rgba(124,58,237,0.08)",
-              border: "1px solid rgba(124,58,237,0.25)",
-              borderRadius: "24px",
-              padding: "40px",
-              textAlign: "center",
-            }}
-          >
-            <div style={{ fontSize: "4rem", marginBottom: "20px" }}>💜</div>
-            <blockquote
-              style={{
-                fontSize: "1.2rem",
-                fontStyle: "italic",
-                color: "#c4b5fd",
-                lineHeight: 1.7,
-                marginBottom: "20px",
-              }}
-            >
-              &ldquo;Naciste para algo más grande. Tu historia no terminó — apenas está comenzando.&rdquo;
-            </blockquote>
-            <p style={{ color: "rgba(245,240,255,0.5)", fontSize: "0.9rem" }}>
-              — Miriam Tenorio Velazco
-            </p>
-          </div>
+        <div className="photo-placeholder" style={{ height: "580px", width: "100%" }}>
+          Miriam Tenorio — foto próximamente
         </div>
 
         <style>{`
           @media (max-width: 768px) {
-            section > div[style*="grid-template-columns: 1fr 1fr"] {
+            section:first-of-type {
               grid-template-columns: 1fr !important;
             }
           }
         `}</style>
       </section>
 
-      {/* LIBRO */}
-      <section className="section-dark" style={{ padding: "100px 24px" }}>
-        <div style={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
-          <div style={{ color: "#a78bfa", fontSize: "0.85rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "16px" }}>
-            Mi Primer Libro
+      {/* STATS */}
+      <section style={{ background: "#111111", borderTop: "1px solid #2A2520", borderBottom: "1px solid #2A2520", padding: "60px 32px" }}>
+        <div style={{
+          maxWidth: "1200px", margin: "0 auto",
+          display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "32px", textAlign: "center",
+        }}>
+          {stats.map((s, i) => (
+            <div key={i}>
+              <div style={{
+                fontFamily: "'Playfair Display', serif",
+                fontSize: "2.8rem", fontWeight: 700, color: "#C9A96E", marginBottom: "8px",
+              }}>{s.value}</div>
+              <div style={{ color: "#A89880", fontSize: "0.85rem", letterSpacing: "0.05em", fontFamily: "'Inter', sans-serif" }}>
+                {s.label}
+              </div>
+            </div>
+          ))}
+        </div>
+        <style>{`@media(max-width:768px){section:nth-of-type(2)>div{grid-template-columns:repeat(2,1fr)!important;}}`}</style>
+      </section>
+
+      {/* SOBRE MI */}
+      <section style={{ padding: "100px 32px", maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
+          <div className="photo-placeholder" style={{ height: "560px" }}>
+            Miriam Tenorio — foto próximamente
           </div>
-          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "#f5f0ff", lineHeight: 1.2, marginBottom: "16px" }}>
-            Mujer Eres La Obra del Maestro
-          </h2>
-          <p style={{ color: "#c4b5fd", fontSize: "1.1rem", marginBottom: "24px", fontStyle: "italic" }}>
-            Naciste para algo más grande
-          </p>
-          <p style={{ color: "rgba(245,240,255,0.7)", lineHeight: 1.8, maxWidth: "600px", margin: "0 auto 40px", fontSize: "1.05rem" }}>
-            Un libro escrito desde las entrañas de la experiencia real. No es teoría — es la historia de una mujer que decidió levantarse y el mapa que siguió para hacerlo.
-          </p>
-          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/libro" className="btn-primary" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <BookOpen size={18} /> Ver el Libro
+          <div>
+            <span className="section-label">Trayectoria</span>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 700, color: "#F5F0E8", marginBottom: "20px" }}>
+              Una trayectoria construida desde la autenticidad.
+            </h2>
+            <div className="divider" />
+            <p style={{ color: "#A89880", lineHeight: 1.9, marginBottom: "28px", fontSize: "0.95rem" }}>
+              Miriam Tenorio Velazco es Doctora en Administración Pública, Maestra en Mercadotecnia y Licenciada en Comunicación y Relaciones Públicas. Con más de 15 años de trayectoria, ha transitado por la docencia universitaria, la gestión gubernamental y el emprendimiento social con propósito.
+            </p>
+            <ul style={{ listStyle: "none", marginBottom: "36px" }}>
+              {[
+                "Doctora en Administración Pública",
+                "Directora General — Secretaría de Bienestar Guerrero",
+                "Candidata a Diputada Local — MORENA Distrito 7",
+                "Docente universitaria UAGro",
+                "Autora publicada en Amazon KDP",
+              ].map((item, i) => (
+                <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "12px", color: "#A89880", fontSize: "0.9rem" }}>
+                  <span style={{ color: "#C9A96E", marginTop: "2px", flexShrink: 0 }}>—</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <Link href="/sobre-mi" className="btn-secondary">
+              Ver trayectoria completa
             </Link>
           </div>
         </div>
+        <style>{`@media(max-width:768px){section:nth-of-type(3)>div{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
-      {/* VALORES */}
-      <section style={{ padding: "100px 24px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: "60px" }}>
-            <div style={{ color: "#a78bfa", fontSize: "0.85rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "16px" }}>
-              Mi Filosofía
-            </div>
-            <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "#f5f0ff" }}>
-              Los pilares de la transformación real
+      {/* FILOSOFIA */}
+      <section style={{ background: "#111111", borderTop: "1px solid #2A2520", borderBottom: "1px solid #2A2520", padding: "100px 32px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "64px" }}>
+            <span className="section-label">Filosofia</span>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8" }}>
+              Los principios que guían todo lo que hago.
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "28px" }}>
-            {valores.map((v, i) => (
-              <div key={i} className="card-purple" style={{ padding: "36px 28px" }}>
-                <div style={{ marginBottom: "16px" }}>{v.icon}</div>
-                <h3 style={{ color: "#f5f0ff", fontWeight: 700, fontSize: "1.15rem", marginBottom: "12px" }}>
-                  {v.title}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px", background: "#2A2520" }}>
+            {filosofia.map((f, i) => (
+              <div key={i} className="card" style={{ padding: "36px 32px", background: "#111111", borderRadius: 0, border: "none" }}>
+                <div style={{ color: "#C9A96E", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.15em", marginBottom: "12px", fontFamily: "'Inter', sans-serif" }}>
+                  {f.num}
+                </div>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.1rem", color: "#F5F0E8", marginBottom: "10px" }}>
+                  {f.titulo}
                 </h3>
-                <p style={{ color: "rgba(245,240,255,0.65)", lineHeight: 1.7, fontSize: "0.95rem" }}>
-                  {v.desc}
-                </p>
+                <p style={{ color: "#A89880", fontSize: "0.9rem", lineHeight: 1.7 }}>{f.desc}</p>
               </div>
             ))}
           </div>
         </div>
+        <style>{`@media(max-width:768px){section:nth-of-type(4)>div>div:last-child{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
-      {/* CONFERENCIAS (preview) */}
-      <section className="section-dark" style={{ padding: "80px 24px" }}>
-        <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
-          <Mic size={40} color="#a78bfa" style={{ margin: "0 auto 20px" }} />
-          <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 700, color: "#f5f0ff", marginBottom: "16px" }}>
-            Conferencias y Keynotes
-          </h2>
-          <p style={{ color: "rgba(245,240,255,0.65)", lineHeight: 1.8, marginBottom: "32px", fontSize: "1rem" }}>
-            Miriam lleva su historia y aprendizajes a escenarios corporativos, eventos de mujeres emprendedoras y espacios de transformación personal. Cada conferencia es una experiencia auténtica y poderosa.
-          </p>
-          <Link href="/conferencias" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "#a78bfa", textDecoration: "none", fontWeight: 600, fontSize: "1rem" }}>
-            Ver temas disponibles <ArrowRight size={16} />
-          </Link>
-        </div>
-      </section>
-
-      {/* TESTIMONIOS */}
-      <section style={{ padding: "100px 24px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: "60px" }}>
-            <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "#f5f0ff" }}>
-              Lo que dicen quienes me conocen
+      {/* CONFERENCIAS */}
+      <section style={{ padding: "100px 32px", maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "start" }}>
+          <div>
+            <span className="section-label">Conferencias</span>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8", marginBottom: "20px" }}>
+              Ideas que transforman audiencias.
             </h2>
+            <div className="divider" />
+            <p style={{ color: "#A89880", lineHeight: 1.9, marginBottom: "32px", fontSize: "0.95rem" }}>
+              Docente universitaria, exfuncionaria de gobierno y autora. Cada conferencia combina rigor académico con testimonio auténtico.
+            </p>
+            <Link href="/contacto" className="btn-primary">
+              Contratame para tu evento
+            </Link>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px" }}>
-            {testimonios.map((t, i) => (
-              <div key={i} className="card-purple" style={{ padding: "32px 28px" }}>
-                <div style={{ color: "#a78bfa", fontSize: "2rem", marginBottom: "16px" }}>❝</div>
-                <p style={{ color: "rgba(245,240,255,0.8)", lineHeight: 1.8, fontStyle: "italic", marginBottom: "20px", fontSize: "0.95rem" }}>
-                  {t.texto}
-                </p>
-                <div>
-                  <p style={{ color: "#c4b5fd", fontWeight: 700, fontSize: "0.95rem" }}>{t.nombre}</p>
-                  <p style={{ color: "rgba(245,240,255,0.4)", fontSize: "0.85rem" }}>{t.cargo}</p>
+          <div>
+            {conferencias.map((c, i) => (
+              <div key={i} style={{ padding: "24px 0", borderBottom: "1px solid #2A2520" }}>
+                <p style={{ color: "#F5F0E8", fontWeight: 500, marginBottom: "10px", fontSize: "0.95rem" }}>{c.titulo}</p>
+                <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                  {c.tags.map(t => (
+                    <span key={t} style={{
+                      border: "1px solid rgba(201,169,110,0.3)",
+                      color: "#C9A96E", padding: "3px 10px",
+                      fontSize: "0.72rem", letterSpacing: "0.08em", fontFamily: "'Inter', sans-serif",
+                    }}>{t}</span>
+                  ))}
                 </div>
               </div>
             ))}
           </div>
         </div>
+        <style>{`@media(max-width:768px){section:nth-of-type(5)>div{grid-template-columns:1fr!important;}}`}</style>
+      </section>
+
+      {/* LIBRO */}
+      <section style={{ background: "#111111", borderTop: "1px solid #2A2520", borderBottom: "1px solid #2A2520", padding: "100px 32px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
+          <div className="photo-placeholder" style={{ height: "480px" }}>
+            Portada del libro — próximamente
+          </div>
+          <div>
+            <span className="section-label">Libro</span>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8", marginBottom: "8px" }}>
+              Un libro que nació de la experiencia real.
+            </h2>
+            <p style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.3rem", fontStyle: "italic", color: "#C9A96E", marginBottom: "20px" }}>
+              Mujer, eres la obra del Maestro
+            </p>
+            <div className="divider" />
+            <p style={{ color: "#A89880", fontSize: "0.85rem", letterSpacing: "0.05em", marginBottom: "20px", fontFamily: "'Inter', sans-serif" }}>
+              LEGACY PUBLISHERS · AMAZON KDP, 2025
+            </p>
+            <p style={{ color: "#A89880", lineHeight: 1.9, marginBottom: "32px", fontSize: "0.95rem" }}>
+              No es teoría. Es el mapa de una mujer que tocó fondo, encontró su fe y decidió reconstruirse con propósito. Escrito para mujeres que sienten que su historia aún no ha terminado.
+            </p>
+            <Link href="/libro" className="btn-primary">
+              Conseguir mi ejemplar
+            </Link>
+          </div>
+        </div>
+        <style>{`@media(max-width:768px){section:nth-of-type(6)>div{grid-template-columns:1fr!important;}}`}</style>
+      </section>
+
+      {/* TIMELINE */}
+      <section style={{ padding: "100px 32px", maxWidth: "900px", margin: "0 auto" }}>
+        <div style={{ textAlign: "center", marginBottom: "64px" }}>
+          <span className="section-label">Trayectoria</span>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8" }}>
+            Una trayectoria construida con propósito.
+          </h2>
+        </div>
+        <div style={{ position: "relative", paddingLeft: "32px", borderLeft: "1px solid #2A2520" }}>
+          {timeline.map((item, i) => (
+            <div key={i} style={{ position: "relative", paddingBottom: "36px" }}>
+              <div style={{
+                position: "absolute", left: "-37px", top: "4px",
+                width: "10px", height: "10px", background: "#C9A96E", borderRadius: "50%",
+              }} />
+              <div style={{ color: "#C9A96E", fontSize: "0.78rem", fontWeight: 600, letterSpacing: "0.12em", marginBottom: "6px", fontFamily: "'Inter', sans-serif" }}>
+                {item.year}
+              </div>
+              <p style={{ color: "#A89880", fontSize: "0.95rem", lineHeight: 1.6 }}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FRASE ANCLA */}
+      <section style={{ background: "#111111", borderTop: "1px solid #2A2520", borderBottom: "1px solid #2A2520", padding: "80px 32px", textAlign: "center" }}>
+        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+          <p style={{
+            fontFamily: "'Playfair Display', serif",
+            fontSize: "clamp(1.3rem,2.5vw,1.8rem)",
+            fontStyle: "italic",
+            color: "#F5F0E8",
+            lineHeight: 1.6,
+            marginBottom: "16px",
+          }}>
+            "Todo lo que se cree, se crea.<br />
+            Todo lo que se da con amor, regresa multiplicado."
+          </p>
+          <p style={{ color: "#C9A96E", fontSize: "0.85rem", letterSpacing: "0.1em", fontFamily: "'Inter', sans-serif" }}>
+            — Miriam Tenorio Velazco
+          </p>
+        </div>
+      </section>
+
+      {/* TESTIMONIOS */}
+      <section style={{ padding: "100px 32px", maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ textAlign: "center", marginBottom: "64px" }}>
+          <span className="section-label">Testimonios</span>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8" }}>
+            Lo que dicen quienes me conocen.
+          </h2>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
+          {testimonios.map((t, i) => (
+            <div key={i} className="card" style={{ padding: "36px 32px", borderLeft: "2px solid #C9A96E" }}>
+              <p style={{ color: "#A89880", lineHeight: 1.8, fontStyle: "italic", marginBottom: "24px", fontSize: "0.95rem" }}>
+                "{t.texto}"
+              </p>
+              <div>
+                <p style={{ color: "#F5F0E8", fontWeight: 600, fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>{t.nombre}</p>
+                <p style={{ color: "#C9A96E", fontSize: "0.8rem", letterSpacing: "0.08em" }}>{t.cargo}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <style>{`@media(max-width:768px){section:nth-last-of-type(2)>div:last-child{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
       {/* CTA FINAL */}
-      <section
-        style={{
-          padding: "100px 24px",
-          textAlign: "center",
-          background: "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(124,58,237,0.15) 0%, transparent 70%)",
-        }}
-      >
-        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "#f5f0ff", lineHeight: 1.2, marginBottom: "20px" }}>
+      <section style={{ background: "#111111", borderTop: "1px solid #2A2520", padding: "100px 32px", textAlign: "center" }}>
+        <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+          <span className="section-label" style={{ display: "block", textAlign: "center" }}>Contacto</span>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8", marginBottom: "20px" }}>
             ¿Lista para escribir tu siguiente capítulo?
           </h2>
-          <p style={{ color: "rgba(245,240,255,0.65)", fontSize: "1.1rem", lineHeight: 1.8, marginBottom: "40px" }}>
-            Si estás en un punto de tu vida donde sientes que necesitas un cambio real, hablemos. No estás sola.
+          <p style={{ color: "#A89880", marginBottom: "36px", lineHeight: 1.8 }}>
+            Conferencias, mentorías, colaboraciones y medios.
           </p>
-          <Link href="/contacto" className="btn-primary" style={{ fontSize: "1.05rem", padding: "16px 40px" }}>
-            Quiero empezar hoy 💜
+          <Link href="/contacto" className="btn-primary" style={{ fontSize: "0.95rem", padding: "16px 40px" }}>
+            Escribir a Miriam
           </Link>
         </div>
       </section>
