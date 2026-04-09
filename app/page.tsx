@@ -146,8 +146,14 @@ export default function HomePage() {
               Una trayectoria construida desde la autenticidad.
             </h2>
             <div className="divider" />
+            <p style={{ color: "#A89880", lineHeight: 1.9, marginBottom: "20px", fontSize: "0.95rem" }}>
+              Soy Miriam Tenorio Velazco, empresaria, autora y mujer en proceso de transformación. Después de tocar fondo, decidí reconstruir mi vida desde la fe, la disciplina y la verdad. No fue fácil. No fue rápido. Pero fue real.
+            </p>
+            <p style={{ color: "#A89880", lineHeight: 1.9, marginBottom: "20px", fontSize: "0.95rem" }}>
+              Hoy, más de diez meses después de tomar la decisión más valiente de mi vida — dejar el alcohol — puedo decir que el avance no siempre es visible para todos, pero es completamente real para mí.
+            </p>
             <p style={{ color: "#A89880", lineHeight: 1.9, marginBottom: "28px", fontSize: "0.95rem" }}>
-              Miriam Tenorio Velazco es Doctora en Administración Pública, Maestra en Mercadotecnia y Licenciada en Comunicación y Relaciones Públicas. Con más de 15 años de trayectoria, ha transitado por la docencia universitaria, la gestión gubernamental y el emprendimiento social con propósito.
+              Escribí mi primer libro, recuperé a mi familia y encontré mi propósito: inspirar a otras mujeres a que vuelvan a empezar, sin importar desde dónde están comenzando.
             </p>
             <ul style={{ listStyle: "none", marginBottom: "36px" }}>
               {[
