@@ -2,16 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-primary: #0A0A0A;
-  --bg-secondary: #111111;
-  --bg-card: #161616;
-  --gold: #C9A96E;
-  --gold-hover: #E8C98A;
-  --gold-dim: rgba(201, 169, 110, 0.15);
+  /* Colores extraidos directamente de la portada del libro */
+  --bg-primary: #0D0618;       /* Morado casi negro de la portada */
+  --bg-secondary: #130A22;     /* Morado oscuro del fondo */
+  --bg-card: #1A0D2E;          /* Morado medio de las cards */
+  --gold: #C9A96E;             /* Dorado crema del titulo del libro */
+  --gold-hover: #E0C48A;
+  --gold-dim: rgba(201, 169, 110, 0.12);
   --gold-border: rgba(201, 169, 110, 0.25);
-  --text-primary: #F5F0E8;
+  --pink: #D4379A;             /* Rosa fucsia del nombre "MIRIAM TENORIO" */
+  --pink-dim: rgba(212, 55, 154, 0.12);
+  --purple-glow: rgba(124, 58, 237, 0.2);  /* Brillo de la mariposa */
+  --text-primary: #F5F0E8;     /* Crema del texto del libro */
   --text-secondary: #A89880;
-  --border: #2A2520;
+  --border: rgba(201, 169, 110, 0.15);
 }
 
 * { box-sizing: border-box; padding: 0; margin: 0; }
@@ -38,7 +42,7 @@ h1, h2, h3, h4 {
 
 .btn-primary {
   background: var(--gold);
-  color: #0A0A0A;
+  color: #0D0618;
   padding: 14px 32px;
   border-radius: 4px;
   font-weight: 600;
@@ -55,6 +59,7 @@ h1, h2, h3, h4 {
 .btn-primary:hover {
   background: var(--gold-hover);
   transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(201,169,110,0.25);
 }
 
 .btn-secondary {
@@ -67,7 +72,7 @@ h1, h2, h3, h4 {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   transition: all 0.25s ease;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--gold-border);
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
@@ -75,21 +80,22 @@ h1, h2, h3, h4 {
 }
 .btn-secondary:hover {
   background: var(--gold-dim);
+  border-color: var(--gold);
   transform: translateY(-1px);
 }
 
-.gold-text {
-  color: var(--gold);
-}
+.gold-text { color: var(--gold); }
+.pink-text { color: var(--pink); }
 
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 2px;
-  transition: border-color 0.25s ease;
+  transition: all 0.25s ease;
 }
 .card:hover {
-  border-color: var(--gold-border);
+  border-color: rgba(201,169,110,0.35);
+  box-shadow: 0 4px 24px rgba(124,58,237,0.08);
 }
 
 .section-label {
@@ -111,8 +117,8 @@ h1, h2, h3, h4 {
 }
 
 .photo-placeholder {
-  background: #1A1410;
-  border: 1px solid var(--gold);
+  background: linear-gradient(135deg, #1A0D2E, #0D0618);
+  border: 1px solid var(--gold-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,6 +127,21 @@ h1, h2, h3, h4 {
   font-size: 0.85rem;
   text-align: center;
   padding: 20px;
+}
+
+/* Brillo sutil de mariposa — elemento decorativo del libro */
+.butterfly-glow {
+  position: relative;
+}
+.butterfly-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; height: 300px;
+  background: radial-gradient(ellipse, rgba(124,58,237,0.15) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
 }
 
 @keyframes fadeUp {

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#0A0A0A", borderTop: "1px solid #2A2520", padding: "64px 32px 32px" }}>
+    <footer style={{ background: "#0D0618", borderTop: "1px solid rgba(201,169,110,0.15)", padding: "64px 32px 32px" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: "48px", marginBottom: "48px" }}>
           <div>
@@ -56,18 +56,18 @@ export default function Footer() {
               ].map(s => (
                 <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" style={{
                   color: "#A89880", textDecoration: "none", fontSize: "0.8rem", fontWeight: 600,
-                  border: "1px solid #2A2520", padding: "6px 10px", transition: "all 0.2s",
+                  border: "1px solid rgba(201,169,110,0.15)", padding: "6px 10px", transition: "all 0.2s",
                 }}>{s.label}</a>
               ))}
             </div>
           </div>
         </div>
 
-        <div style={{ borderTop: "1px solid #2A2520", paddingTop: "24px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+        <div style={{ borderTop: "1px solid rgba(201,169,110,0.15)", paddingTop: "24px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
           <p style={{ color: "#A89880", fontSize: "0.8rem" }}>
             © 2025 Miriam Tenorio Velazco. Todos los derechos reservados.
           </p>
-          <p style={{ color: "#2A2520", fontSize: "0.8rem" }}>
+          <p style={{ color: "rgba(201,169,110,0.15)", fontSize: "0.8rem" }}>
             Mexico
           </p>
         </div>

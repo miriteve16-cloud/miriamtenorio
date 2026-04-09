@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <header style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
-      background: scrolled ? "rgba(10,10,10,0.97)" : "#0A0A0A",
+      background: scrolled ? "rgba(13,6,24,0.97)" : "#0D0618",
       borderBottom: "1px solid rgba(201,169,110,0.15)",
       backdropFilter: "blur(12px)",
       transition: "all 0.3s ease",
@@ -67,11 +67,11 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div style={{ background: "#0A0A0A", borderTop: "1px solid #2A2520", padding: "20px 32px" }}>
+        <div style={{ background: "#0D0618", borderTop: "1px solid rgba(201,169,110,0.15)", padding: "20px 32px" }}>
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)} style={{
               display: "block", color: "#A89880", textDecoration: "none",
-              padding: "12px 0", borderBottom: "1px solid #2A2520", fontSize: "0.95rem",
+              padding: "12px 0", borderBottom: "1px solid rgba(201,169,110,0.15)", fontSize: "0.95rem",
             }}>
               {link.label}
             </Link>

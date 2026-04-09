@@ -4,7 +4,7 @@ import { useState } from "react";
 const tiposConsulta = ["Conferencia / Keynote", "Evento Corporativo", "Mentoria Personal", "Colaboracion", "Medios / Prensa", "Conseguir el Libro", "Otro"];
 
 const inputStyle = {
-  width: "100%", background: "#111111", border: "1px solid #2A2520",
+  width: "100%", background: "#1A0D2E", border: "1px solid rgba(201,169,110,0.15)",
   padding: "14px 16px", color: "#F5F0E8", fontSize: "0.95rem",
   outline: "none", fontFamily: "'Inter', sans-serif", borderRadius: "2px",
   transition: "border-color 0.2s",
@@ -34,7 +34,7 @@ export default function ContactoPage() {
 
   return (
     <div style={{ paddingTop: "72px" }}>
-      <section style={{ padding: "80px 32px 40px", borderBottom: "1px solid #2A2520" }}>
+      <section style={{ padding: "80px 32px 40px", borderBottom: "1px solid rgba(201,169,110,0.15)" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <span className="section-label">Contacto</span>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2rem,5vw,3.5rem)", color: "#F5F0E8", marginBottom: "16px" }}>
@@ -74,13 +74,13 @@ export default function ContactoPage() {
 
           <div>
             {enviado ? (
-              <div style={{ textAlign: "center", padding: "80px 40px", border: "1px solid rgba(201,169,110,0.3)", background: "#111111" }}>
+              <div style={{ textAlign: "center", padding: "80px 40px", border: "1px solid rgba(201,169,110,0.3)", background: "#1A0D2E" }}>
                 <div style={{ width: "48px", height: "1px", background: "#C9A96E", margin: "0 auto 24px" }} />
                 <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.6rem", color: "#F5F0E8", marginBottom: "12px" }}>Mensaje recibido</h3>
                 <p style={{ color: "#A89880" }}>Te responderé en menos de 48 horas.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} style={{ background: "#111111", border: "1px solid #2A2520", padding: "48px" }}>
+              <form onSubmit={handleSubmit} style={{ background: "#1A0D2E", border: "1px solid rgba(201,169,110,0.15)", padding: "48px" }}>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "16px" }}>
                   <div>
                     <label style={{ display: "block", color: "#A89880", fontSize: "0.8rem", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "8px", fontFamily: "'Inter', sans-serif" }}>Nombre *</label>
@@ -103,7 +103,7 @@ export default function ContactoPage() {
                 </div>
                 <div style={{ marginBottom: "16px" }}>
                   <label style={{ display: "block", color: "#A89880", fontSize: "0.8rem", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "8px", fontFamily: "'Inter', sans-serif" }}>Tipo de consulta *</label>
-                  <select name="tipo" required value={form.tipo} onChange={handleChange} style={{ ...inputStyle, background: "#111111" }}>
+                  <select name="tipo" required value={form.tipo} onChange={handleChange} style={{ ...inputStyle, background: "#1A0D2E" }}>
                     <option value="">Selecciona una opción</option>
                     {tiposConsulta.map(t => <option key={t} value={t}>{t}</option>)}
                   </select>

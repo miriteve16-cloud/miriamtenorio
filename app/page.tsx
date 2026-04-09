@@ -37,9 +37,9 @@ const timeline = [
 ];
 
 const testimonios = [
-  { texto: "Miriam me enseñó que el primer paso es el más difícil pero también el más poderoso.", nombre: "Ana L.", cargo: "Emprendedora" },
-  { texto: "Pensé que era demasiado tarde para empezar de nuevo. Miriam me demostró que nunca lo es.", nombre: "Carmen R.", cargo: "Empresaria" },
-  { texto: "Su libro llegó a mis manos en el momento exacto.", nombre: "Patricia M.", cargo: "Lectora" },
+  { texto: "Miriam Tenorio es un ser humano que desborda luz, fuerza y amor. Comprometida con su propósito y con las mujeres que la rodean. Sin duda, cada palabra en este libro fue escrita desde el corazón.", nombre: "Coral Mujaes", cargo: "Coach de Vida & Autora", destacado: true },
+  { texto: "Pensé que era demasiado tarde para empezar de nuevo. Miriam me demostró que nunca lo es.", nombre: "Carmen R.", cargo: "Empresaria", destacado: false },
+  { texto: "Su libro llegó a mis manos en el momento exacto.", nombre: "Patricia M.", cargo: "Lectora", destacado: false },
 ];
 
 export default function HomePage() {
@@ -60,14 +60,15 @@ export default function HomePage() {
         <div>
           <span style={{
             display: "inline-block",
-            border: "1px solid rgba(201,169,110,0.3)",
-            color: "#C9A96E",
+            border: "1px solid rgba(212,55,154,0.35)",
+            color: "#D4379A",
             fontSize: "0.75rem",
             fontWeight: 500,
             letterSpacing: "0.1em",
             padding: "8px 16px",
             marginBottom: "32px",
             fontFamily: "'Inter', sans-serif",
+            background: "rgba(212,55,154,0.08)",
           }}>
             Doctora en Administración Pública &nbsp;·&nbsp; Autora &nbsp;·&nbsp; Conferencista &nbsp;·&nbsp; Docente
           </span>
@@ -113,7 +114,7 @@ export default function HomePage() {
       </section>
 
       {/* STATS */}
-      <section style={{ background: "#111111", borderTop: "1px solid #2A2520", borderBottom: "1px solid #2A2520", padding: "60px 32px" }}>
+      <section style={{ background: "#130A22", borderTop: "1px solid rgba(201,169,110,0.15)", borderBottom: "1px solid rgba(201,169,110,0.15)", padding: "60px 32px" }}>
         <div style={{
           maxWidth: "1200px", margin: "0 auto",
           display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "32px", textAlign: "center",
@@ -171,7 +172,7 @@ export default function HomePage() {
       </section>
 
       {/* FILOSOFIA */}
-      <section style={{ background: "#111111", borderTop: "1px solid #2A2520", borderBottom: "1px solid #2A2520", padding: "100px 32px" }}>
+      <section style={{ background: "#130A22", borderTop: "1px solid rgba(201,169,110,0.15)", borderBottom: "1px solid rgba(201,169,110,0.15)", padding: "100px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "64px" }}>
             <span className="section-label">Filosofia</span>
@@ -179,9 +180,9 @@ export default function HomePage() {
               Los principios que guían todo lo que hago.
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px", background: "#2A2520" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px", background: "rgba(201,169,110,0.15)" }}>
             {filosofia.map((f, i) => (
-              <div key={i} className="card" style={{ padding: "36px 32px", background: "#111111", borderRadius: 0, border: "none" }}>
+              <div key={i} className="card" style={{ padding: "36px 32px", background: "#1A0D2E", borderRadius: 0, border: "none" }}>
                 <div style={{ color: "#C9A96E", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.15em", marginBottom: "12px", fontFamily: "'Inter', sans-serif" }}>
                   {f.num}
                 </div>
@@ -214,7 +215,7 @@ export default function HomePage() {
           </div>
           <div>
             {conferencias.map((c, i) => (
-              <div key={i} style={{ padding: "24px 0", borderBottom: "1px solid #2A2520" }}>
+              <div key={i} style={{ padding: "24px 0", borderBottom: "1px solid rgba(201,169,110,0.15)" }}>
                 <p style={{ color: "#F5F0E8", fontWeight: 500, marginBottom: "10px", fontSize: "0.95rem" }}>{c.titulo}</p>
                 <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
                   {c.tags.map(t => (
@@ -233,7 +234,7 @@ export default function HomePage() {
       </section>
 
       {/* LIBRO */}
-      <section style={{ background: "#111111", borderTop: "1px solid #2A2520", borderBottom: "1px solid #2A2520", padding: "100px 32px" }}>
+      <section style={{ background: "#130A22", borderTop: "1px solid rgba(201,169,110,0.15)", borderBottom: "1px solid rgba(201,169,110,0.15)", padding: "100px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
           <div className="photo-placeholder" style={{ height: "480px" }}>
             Portada del libro — próximamente
@@ -269,7 +270,7 @@ export default function HomePage() {
             Una trayectoria construida con propósito.
           </h2>
         </div>
-        <div style={{ position: "relative", paddingLeft: "32px", borderLeft: "1px solid #2A2520" }}>
+        <div style={{ position: "relative", paddingLeft: "32px", borderLeft: "1px solid rgba(201,169,110,0.2)" }}>
           {timeline.map((item, i) => (
             <div key={i} style={{ position: "relative", paddingBottom: "36px" }}>
               <div style={{
@@ -286,7 +287,7 @@ export default function HomePage() {
       </section>
 
       {/* FRASE ANCLA */}
-      <section style={{ background: "#111111", borderTop: "1px solid #2A2520", borderBottom: "1px solid #2A2520", padding: "80px 32px", textAlign: "center" }}>
+      <section style={{ background: "#130A22", borderTop: "1px solid rgba(201,169,110,0.15)", borderBottom: "1px solid rgba(201,169,110,0.15)", padding: "80px 32px", textAlign: "center" }}>
         <div style={{ maxWidth: "700px", margin: "0 auto" }}>
           <p style={{
             fontFamily: "'Playfair Display', serif",
@@ -314,12 +315,16 @@ export default function HomePage() {
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
           {testimonios.map((t, i) => (
-            <div key={i} className="card" style={{ padding: "36px 32px", borderLeft: "2px solid #C9A96E" }}>
+            <div key={i} className="card" style={{
+              padding: "36px 32px",
+              borderLeft: `2px solid ${t.destacado ? "#D4379A" : "#C9A96E"}`,
+              background: t.destacado ? "rgba(212,55,154,0.06)" : undefined,
+            }}>
               <p style={{ color: "#A89880", lineHeight: 1.8, fontStyle: "italic", marginBottom: "24px", fontSize: "0.95rem" }}>
                 "{t.texto}"
               </p>
               <div>
-                <p style={{ color: "#F5F0E8", fontWeight: 600, fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>{t.nombre}</p>
+                <p style={{ color: t.destacado ? "#D4379A" : "#F5F0E8", fontWeight: 600, fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>{t.nombre}</p>
                 <p style={{ color: "#C9A96E", fontSize: "0.8rem", letterSpacing: "0.08em" }}>{t.cargo}</p>
               </div>
             </div>
@@ -329,7 +334,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA FINAL */}
-      <section style={{ background: "#111111", borderTop: "1px solid #2A2520", padding: "100px 32px", textAlign: "center" }}>
+      <section style={{ background: "#130A22", borderTop: "1px solid rgba(201,169,110,0.15)", padding: "100px 32px", textAlign: "center" }}>
         <div style={{ maxWidth: "600px", margin: "0 auto" }}>
           <span className="section-label" style={{ display: "block", textAlign: "center" }}>Contacto</span>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8", marginBottom: "20px" }}>
