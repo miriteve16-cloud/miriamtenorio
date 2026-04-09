@@ -11,7 +11,7 @@ const inputStyle = {
 };
 
 export default function ContactoPage() {
-  const [form, setForm] = useState({ nombre: "", email: "", whatsapp: "", empresa: "", tipo: "", mensaje: "" });
+  const [form, setForm] = useState({ nombre: "", email: "", empresa: "", tipo: "", mensaje: "" });
   const [enviando, setEnviando] = useState(false);
   const [enviado, setEnviado] = useState(false);
   const [error, setError] = useState("");
@@ -26,7 +26,7 @@ export default function ContactoPage() {
     setError("");
     try {
       const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
-      if (res.ok) { setEnviado(true); setForm({ nombre: "", email: "", whatsapp: "", empresa: "", tipo: "", mensaje: "" }); }
+      if (res.ok) { setEnviado(true); setForm({ nombre: "", email: "", empresa: "", tipo: "", mensaje: "" }); }
       else setError("Hubo un error. Por favor intenta de nuevo.");
     } catch { setError("Error de conexión. Por favor intenta de nuevo."); }
     setEnviando(false);
@@ -91,11 +91,7 @@ export default function ContactoPage() {
                     <input name="email" type="email" required value={form.email} onChange={handleChange} placeholder="tu@email.com" style={inputStyle} />
                   </div>
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "16px" }}>
-                  <div>
-                    <label style={{ display: "block", color: "#A89880", fontSize: "0.8rem", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "8px", fontFamily: "'Inter', sans-serif" }}>WhatsApp</label>
-                    <input name="whatsapp" value={form.whatsapp} onChange={handleChange} placeholder="+52 000 000 0000" style={inputStyle} />
-                  </div>
+                <div style={{ marginBottom: "16px" }}>
                   <div>
                     <label style={{ display: "block", color: "#A89880", fontSize: "0.8rem", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "8px", fontFamily: "'Inter', sans-serif" }}>Empresa</label>
                     <input name="empresa" value={form.empresa} onChange={handleChange} placeholder="Empresa u organización" style={inputStyle} />

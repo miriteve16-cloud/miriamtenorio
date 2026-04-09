@@ -38,7 +38,7 @@ const faqSchema = {
       name: "¿Cómo contratar a Miriam Tenorio para una conferencia?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Puedes contactarla a través del formulario en miriamtenorio.com/contacto o directamente por WhatsApp al +52 744 175 7547.",
+        text: "Puedes contactarla a través del formulario en miriamtenorio.com/contacto o por correo a miriteve16@gmail.com.",
       },
     },
   ],

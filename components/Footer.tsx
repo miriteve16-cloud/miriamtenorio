@@ -43,11 +43,7 @@ export default function Footer() {
             <h4 style={{ color: "#F5F0E8", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "20px", fontFamily: "'Inter', sans-serif" }}>
               Contacto
             </h4>
-            <p style={{ color: "#A89880", fontSize: "0.9rem", marginBottom: "10px" }}>miriteve16@gmail.com</p>
-            <a href="https://wa.me/527441757547" target="_blank" rel="noopener noreferrer"
-              style={{ color: "#A89880", textDecoration: "none", fontSize: "0.9rem", display: "block", marginBottom: "20px" }}>
-              +52 744 175 7547
-            </a>
+            <p style={{ color: "#A89880", fontSize: "0.9rem", marginBottom: "20px" }}>miriteve16@gmail.com</p>
             <div style={{ display: "flex", gap: "16px" }}>
               {[
                 { href: "https://www.instagram.com/miriamtenorio1", label: "IG" },

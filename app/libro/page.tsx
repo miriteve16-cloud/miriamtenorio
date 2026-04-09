@@ -57,7 +57,7 @@ const faqSchema = {
       name: "¿Cómo puedo conseguir el libro de Miriam Tenorio?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Puedes contactar a Miriam directamente a través del formulario de contacto en miriamtenorio.com o escribirle por WhatsApp para conocer los formatos disponibles.",
+        text: "Puedes contactar a Miriam directamente a través del formulario de contacto en miriamtenorio.com/contacto o por correo a miriteve16@gmail.com.",
       },
     },
   ],

@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { nombre, email, whatsapp, empresa, tipo, mensaje } = body;
+    const { nombre, email, empresa, tipo, mensaje } = body;
 
     if (!nombre || !email || !tipo || !mensaje) {
       return NextResponse.json({ error: "Campos requeridos faltantes" }, { status: 400 });
@@ -55,7 +55,6 @@ export async function POST(req: NextRequest) {
               <div class="label">Email</div>
               <div class="value"><a href="mailto:${email}">${email}</a></div>
             </div>
-            ${whatsapp ? `<div class="field"><div class="label">WhatsApp</div><div class="value"><a href="https://wa.me/${whatsapp.replace(/\D/g,'')}">${whatsapp}</a></div></div>` : ""}
             ${empresa ? `<div class="field"><div class="label">Empresa</div><div class="value">${empresa}</div></div>` : ""}
             <div class="field">
               <div class="label">Mensaje</div>
