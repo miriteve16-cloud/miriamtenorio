@@ -27,13 +27,13 @@ const conferencias = [
 ];
 
 const timeline = [
-  { year: "2005", desc: "Primer lugar nacional, Encuentro de Mercadotecnia y Publicidad" },
-  { year: "2008", desc: "Directora General, Revista CÓDIGOS Tlaxcala" },
-  { year: "2021", desc: "Candidata a Diputada Local Distrito 7, Acapulco — MORENA" },
-  { year: "2021–2023", desc: "Directora General de Acciones Prioritarias, Secretaría de Bienestar Guerrero" },
-  { year: "2023", desc: "Docente Universidad Autónoma de Guerrero (UAGro)" },
-  { year: "2025", desc: 'Autora "Mujer, eres la obra del Maestro" — Amazon KDP' },
   { year: "Presente", desc: "Doctorado en Administración Pública en proceso" },
+  { year: "2025", desc: 'Autora "Mujer, eres la obra del Maestro" — Amazon KDP' },
+  { year: "2023", desc: "Docente Universidad Autónoma de Guerrero (UAGro)" },
+  { year: "2021–2023", desc: "Directora General de Acciones Prioritarias, Secretaría de Bienestar Guerrero" },
+  { year: "2021", desc: "Candidata a Diputada Local Distrito 7, Acapulco — MORENA" },
+  { year: "2008", desc: "Directora General, Revista CÓDIGOS Tlaxcala" },
+  { year: "2005", desc: "Primer lugar nacional, Encuentro de Mercadotecnia y Publicidad" },
 ];
 
 const testimonios = [
@@ -296,8 +296,7 @@ export default function HomePage() {
             lineHeight: 1.6,
             marginBottom: "16px",
           }}>
-            "Todo lo que se cree, se crea.<br />
-            Todo lo que se da con amor, regresa multiplicado."
+            "Todo lo que se da con amor, regresa multiplicado."
           </p>
           <p style={{ color: "#C9A96E", fontSize: "0.85rem", letterSpacing: "0.1em", fontFamily: "'Inter', sans-serif" }}>
             — Miriam Tenorio Velazco

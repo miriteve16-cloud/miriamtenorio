@@ -52,13 +52,9 @@ export default function ContactoPage() {
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.3rem", color: "#F5F0E8", marginBottom: "28px" }}>
               Información de contacto
             </h2>
-            <div style={{ marginBottom: "32px" }}>
+            <div style={{ marginBottom: "40px" }}>
               <p style={{ color: "#A89880", fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "8px", fontFamily: "'Inter', sans-serif" }}>Email</p>
               <a href="mailto:miriteve16@gmail.com" style={{ color: "#F5F0E8", textDecoration: "none", fontSize: "0.95rem" }}>miriteve16@gmail.com</a>
-            </div>
-            <div style={{ marginBottom: "40px" }}>
-              <p style={{ color: "#A89880", fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "8px", fontFamily: "'Inter', sans-serif" }}>WhatsApp</p>
-              <a href="https://wa.me/527441757547" target="_blank" rel="noopener noreferrer" style={{ color: "#F5F0E8", textDecoration: "none", fontSize: "0.95rem" }}>+52 744 175 7547</a>
             </div>
 
             <div style={{ marginBottom: "40px" }}>
@@ -71,8 +67,8 @@ export default function ContactoPage() {
               ))}
             </div>
 
-            <a href="https://wa.me/527441757547?text=Hola%20Miriam%2C%20me%20gustaria%20contactarte" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ display: "inline-block", fontSize: "0.85rem" }}>
-              Escribir por WhatsApp
+            <a href="mailto:miriteve16@gmail.com" className="btn-secondary" style={{ display: "inline-block", fontSize: "0.85rem" }}>
+              Escribir por email
             </a>
           </div>
 
