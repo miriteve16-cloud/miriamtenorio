@@ -42,13 +42,67 @@ const testimonios = [
   { texto: "Su libro llegó a mis manos en el momento exacto.", nombre: "Patricia M.", cargo: "Lectora", destacado: false },
 ];
 
+const photoPlaceholder = (height: string) => (
+  <div style={{
+    height, width: "100%",
+    background: "#1A0D2E",
+    border: "1px solid rgba(201,169,110,0.2)",
+    borderRadius: "4px",
+    display: "flex",
+    flexDirection: "column" as const,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "16px",
+  }}>
+    <div style={{
+      width: "110px", height: "110px",
+      borderRadius: "50%",
+      background: "rgba(201,169,110,0.08)",
+      border: "2px solid rgba(201,169,110,0.25)",
+      display: "flex", alignItems: "center", justifyContent: "center",
+    }}>
+      <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#C9A96E" }}>MT</span>
+    </div>
+    <p style={{ color: "rgba(201,169,110,0.4)", fontSize: "0.75rem", letterSpacing: "0.12em", fontFamily: "'Inter', sans-serif", margin: 0 }}>
+      Foto próximamente
+    </p>
+  </div>
+);
+
+const libroPlaceholder = (
+  <div style={{
+    height: "480px", width: "100%",
+    background: "#1A0D2E",
+    border: "1px solid rgba(201,169,110,0.2)",
+    borderRadius: "4px",
+    display: "flex",
+    flexDirection: "column" as const,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "20px",
+  }}>
+    <div style={{
+      width: "100px", height: "140px",
+      background: "rgba(201,169,110,0.08)",
+      border: "2px solid rgba(201,169,110,0.25)",
+      display: "flex", alignItems: "center", justifyContent: "center",
+      borderRadius: "2px",
+    }}>
+      <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", color: "#C9A96E" }}>📖</span>
+    </div>
+    <p style={{ color: "rgba(201,169,110,0.4)", fontSize: "0.75rem", letterSpacing: "0.12em", fontFamily: "'Inter', sans-serif", margin: 0 }}>
+      Portada próximamente
+    </p>
+  </div>
+);
+
 export default function HomePage() {
   return (
-    <div style={{ paddingTop: "72px" }}>
+    <div style={{ paddingTop: "120px" }}>
 
       {/* HERO */}
       <section style={{
-        minHeight: "calc(100vh - 72px)",
+        minHeight: "calc(100vh - 120px)",
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         alignItems: "center",
@@ -70,7 +124,7 @@ export default function HomePage() {
             fontFamily: "'Inter', sans-serif",
             background: "rgba(212,55,154,0.08)",
           }}>
-            Doctora en Administración Pública &nbsp;·&nbsp; Autora &nbsp;·&nbsp; Conferencista &nbsp;·&nbsp; Docente
+            Doctoranda en Administración Pública &nbsp;·&nbsp; Autora &nbsp;·&nbsp; Conferencista &nbsp;·&nbsp; Mentora &nbsp;·&nbsp; Docente
           </span>
 
           <h1 style={{
@@ -92,7 +146,7 @@ export default function HomePage() {
 
           <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
             <Link href="/contacto" className="btn-primary">
-              Contratame para una conferencia
+              Hagámoslo Juntas
             </Link>
             <Link href="/sobre-mi" className="btn-secondary">
               Conoce mi historia
@@ -100,9 +154,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="photo-placeholder" style={{ height: "580px", width: "100%" }}>
-          Miriam Tenorio — foto próximamente
-        </div>
+        {photoPlaceholder("580px")}
 
         <style>{`
           @media (max-width: 768px) {
@@ -137,9 +189,7 @@ export default function HomePage() {
       {/* SOBRE MI */}
       <section style={{ padding: "100px 32px", maxWidth: "1200px", margin: "0 auto" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
-          <div className="photo-placeholder" style={{ height: "560px" }}>
-            Miriam Tenorio — foto próximamente
-          </div>
+          {photoPlaceholder("560px")}
           <div>
             <span className="section-label">Trayectoria</span>
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 700, color: "#F5F0E8", marginBottom: "20px" }}>
@@ -157,7 +207,7 @@ export default function HomePage() {
             </p>
             <ul style={{ listStyle: "none", marginBottom: "36px" }}>
               {[
-                "Doctora en Administración Pública",
+                "Doctoranda en Administración Pública",
                 "Directora General — Secretaría de Bienestar Guerrero",
                 "Candidata a Diputada Local — MORENA Distrito 7",
                 "Docente universitaria UAGro",
@@ -216,7 +266,7 @@ export default function HomePage() {
               Docente universitaria, exfuncionaria de gobierno y autora. Cada conferencia combina rigor académico con testimonio auténtico.
             </p>
             <Link href="/contacto" className="btn-primary">
-              Contratame para tu evento
+              Hagámoslo Juntas
             </Link>
           </div>
           <div>
@@ -239,12 +289,30 @@ export default function HomePage() {
         <style>{`@media(max-width:768px){section:nth-of-type(5)>div{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
+      {/* MENTORÍA */}
+      <section style={{ background: "#130A22", borderTop: "1px solid rgba(212,55,154,0.2)", borderBottom: "1px solid rgba(212,55,154,0.2)", padding: "100px 32px" }}>
+        <div style={{ maxWidth: "860px", margin: "0 auto", textAlign: "center" }}>
+          <span className="section-label">Mentoría</span>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8", marginBottom: "20px" }}>
+            Mentoría Grupal para Mujeres Emprendedoras
+          </h2>
+          <div className="divider" style={{ margin: "0 auto 28px" }} />
+          <p style={{ color: "#A89880", lineHeight: 1.9, marginBottom: "20px", fontSize: "1rem" }}>
+            Acompañamiento mensual para mujeres que quieren transformar su vida y su negocio. Sesiones en vivo, comunidad de apoyo y herramientas prácticas.
+          </p>
+          <p style={{ color: "#D4379A", fontWeight: 600, fontSize: "1rem", marginBottom: "40px", fontFamily: "'Inter', sans-serif" }}>
+            Plazas limitadas para el 2 de junio. Escríbeme y te cuento todo.
+          </p>
+          <Link href="/contacto" className="btn-primary">
+            Hagámoslo Juntas
+          </Link>
+        </div>
+      </section>
+
       {/* LIBRO */}
-      <section style={{ background: "#130A22", borderTop: "1px solid rgba(201,169,110,0.15)", borderBottom: "1px solid rgba(201,169,110,0.15)", padding: "100px 32px" }}>
+      <section style={{ padding: "100px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
-          <div className="photo-placeholder" style={{ height: "480px" }}>
-            Portada del libro — próximamente
-          </div>
+          {libroPlaceholder}
           <div>
             <span className="section-label">Libro</span>
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8", marginBottom: "8px" }}>
@@ -260,40 +328,47 @@ export default function HomePage() {
             <p style={{ color: "#A89880", lineHeight: 1.9, marginBottom: "32px", fontSize: "0.95rem" }}>
               No es teoría. Es el mapa de una mujer que tocó fondo, encontró su fe y decidió reconstruirse con propósito. Escrito para mujeres que sienten que su historia aún no ha terminado.
             </p>
-            <Link href="/libro" className="btn-primary">
-              Conseguir mi ejemplar
-            </Link>
+            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+              <a href="https://a.co/d/0couRUZG" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                Consigue tu ejemplar
+              </a>
+              <Link href="/libro" className="btn-secondary">
+                Conoce el libro
+              </Link>
+            </div>
           </div>
         </div>
-        <style>{`@media(max-width:768px){section:nth-of-type(6)>div{grid-template-columns:1fr!important;}}`}</style>
+        <style>{`@media(max-width:768px){section:nth-of-type(7)>div{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
       {/* TIMELINE */}
-      <section style={{ padding: "100px 32px", maxWidth: "900px", margin: "0 auto" }}>
-        <div style={{ textAlign: "center", marginBottom: "64px" }}>
-          <span className="section-label">Trayectoria</span>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8" }}>
-            Una trayectoria construida con propósito.
-          </h2>
-        </div>
-        <div style={{ position: "relative", paddingLeft: "32px", borderLeft: "1px solid rgba(201,169,110,0.2)" }}>
-          {timeline.map((item, i) => (
-            <div key={i} style={{ position: "relative", paddingBottom: "36px" }}>
-              <div style={{
-                position: "absolute", left: "-37px", top: "4px",
-                width: "10px", height: "10px", background: "#C9A96E", borderRadius: "50%",
-              }} />
-              <div style={{ color: "#C9A96E", fontSize: "0.78rem", fontWeight: 600, letterSpacing: "0.12em", marginBottom: "6px", fontFamily: "'Inter', sans-serif" }}>
-                {item.year}
+      <section style={{ background: "#130A22", borderTop: "1px solid rgba(201,169,110,0.15)", borderBottom: "1px solid rgba(201,169,110,0.15)", padding: "100px 32px" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "64px" }}>
+            <span className="section-label">Trayectoria</span>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8" }}>
+              Una trayectoria construida con propósito.
+            </h2>
+          </div>
+          <div style={{ position: "relative", paddingLeft: "32px", borderLeft: "1px solid rgba(201,169,110,0.2)" }}>
+            {timeline.map((item, i) => (
+              <div key={i} style={{ position: "relative", paddingBottom: "36px" }}>
+                <div style={{
+                  position: "absolute", left: "-37px", top: "4px",
+                  width: "10px", height: "10px", background: "#C9A96E", borderRadius: "50%",
+                }} />
+                <div style={{ color: "#C9A96E", fontSize: "0.78rem", fontWeight: 600, letterSpacing: "0.12em", marginBottom: "6px", fontFamily: "'Inter', sans-serif" }}>
+                  {item.year}
+                </div>
+                <p style={{ color: "#A89880", fontSize: "0.95rem", lineHeight: 1.6 }}>{item.desc}</p>
               </div>
-              <p style={{ color: "#A89880", fontSize: "0.95rem", lineHeight: 1.6 }}>{item.desc}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* FRASE ANCLA */}
-      <section style={{ background: "#130A22", borderTop: "1px solid rgba(201,169,110,0.15)", borderBottom: "1px solid rgba(201,169,110,0.15)", padding: "80px 32px", textAlign: "center" }}>
+      <section style={{ padding: "80px 32px", textAlign: "center" }}>
         <div style={{ maxWidth: "700px", margin: "0 auto" }}>
           <p style={{
             fontFamily: "'Playfair Display', serif",
@@ -312,31 +387,56 @@ export default function HomePage() {
       </section>
 
       {/* TESTIMONIOS */}
-      <section style={{ padding: "100px 32px", maxWidth: "1200px", margin: "0 auto" }}>
-        <div style={{ textAlign: "center", marginBottom: "64px" }}>
-          <span className="section-label">Testimonios</span>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8" }}>
-            Lo que dicen quienes me conocen.
-          </h2>
-        </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
-          {testimonios.map((t, i) => (
-            <div key={i} className="card" style={{
-              padding: "36px 32px",
-              borderLeft: `2px solid ${t.destacado ? "#D4379A" : "#C9A96E"}`,
-              background: t.destacado ? "rgba(212,55,154,0.06)" : undefined,
-            }}>
-              <p style={{ color: "#A89880", lineHeight: 1.8, fontStyle: "italic", marginBottom: "24px", fontSize: "0.95rem" }}>
-                "{t.texto}"
-              </p>
-              <div>
-                <p style={{ color: t.destacado ? "#D4379A" : "#F5F0E8", fontWeight: 600, fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>{t.nombre}</p>
-                <p style={{ color: "#C9A96E", fontSize: "0.8rem", letterSpacing: "0.08em" }}>{t.cargo}</p>
+      <section style={{ background: "#130A22", borderTop: "1px solid rgba(201,169,110,0.15)", borderBottom: "1px solid rgba(201,169,110,0.15)", padding: "100px 32px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "64px" }}>
+            <span className="section-label">Testimonios</span>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8" }}>
+              Lo que dicen quienes me conocen.
+            </h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
+            {testimonios.map((t, i) => (
+              <div key={i} className="card" style={{
+                padding: "36px 32px",
+                borderLeft: `2px solid ${t.destacado ? "#D4379A" : "#C9A96E"}`,
+                background: t.destacado ? "rgba(212,55,154,0.06)" : undefined,
+              }}>
+                <p style={{ color: "#A89880", lineHeight: 1.8, fontStyle: "italic", marginBottom: "24px", fontSize: "0.95rem" }}>
+                  "{t.texto}"
+                </p>
+                <div>
+                  <p style={{ color: t.destacado ? "#D4379A" : "#F5F0E8", fontWeight: 600, fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>{t.nombre}</p>
+                  <p style={{ color: "#C9A96E", fontSize: "0.8rem", letterSpacing: "0.08em" }}>{t.cargo}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        <style>{`@media(max-width:768px){section:nth-last-of-type(2)>div:last-child{grid-template-columns:1fr!important;}}`}</style>
+        <style>{`@media(max-width:768px){section:nth-last-of-type(3)>div>div:last-child{grid-template-columns:1fr!important;}}`}</style>
+      </section>
+
+      {/* REGALO GRATUITO */}
+      <section style={{
+        background: "linear-gradient(135deg, #1A0D2E 0%, #2D1458 100%)",
+        borderTop: "1px solid rgba(212,55,154,0.2)",
+        borderBottom: "1px solid rgba(212,55,154,0.2)",
+        padding: "80px 32px",
+        textAlign: "center",
+      }}>
+        <div style={{ maxWidth: "560px", margin: "0 auto" }}>
+          <div style={{ fontSize: "2.2rem", marginBottom: "20px" }}>🎁</div>
+          <span className="section-label">Regalo para ti</span>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.6rem,3vw,2.2rem)", color: "#F5F0E8", marginBottom: "16px" }}>
+            Descarga gratis los 3 primeros pasos del Método METAMORFOSIS
+          </h2>
+          <p style={{ color: "#A89880", lineHeight: 1.8, marginBottom: "36px", fontSize: "0.95rem" }}>
+            Una guía práctica para mujeres listas para transformarse. Sin rodeos, sin teoría vacía.
+          </p>
+          <Link href="/contacto" className="btn-primary">
+            Quiero mi guía gratis
+          </Link>
+        </div>
       </section>
 
       {/* CTA FINAL */}
@@ -350,7 +450,7 @@ export default function HomePage() {
             Conferencias, mentorías, colaboraciones y medios.
           </p>
           <Link href="/contacto" className="btn-primary" style={{ fontSize: "0.95rem", padding: "16px 40px" }}>
-            Escribir a Miriam
+            Hagámoslo Juntas
           </Link>
         </div>
       </section>

@@ -25,13 +25,51 @@ export default function Header() {
     <header style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
       background: scrolled ? "rgba(13,6,24,0.97)" : "#0D0618",
-      borderBottom: "1px solid rgba(201,169,110,0.15)",
       backdropFilter: "blur(12px)",
       transition: "all 0.3s ease",
     }}>
+
+      {/* BANNER CONFERENCIA */}
+      <div style={{
+        background: "linear-gradient(135deg, #2D1458 0%, #4A0E6B 100%)",
+        borderBottom: "1px solid rgba(212,55,154,0.3)",
+        padding: "9px 24px",
+        textAlign: "center",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "20px",
+        flexWrap: "wrap",
+      }}>
+        <p style={{ color: "#F5F0E8", fontSize: "0.78rem", fontFamily: "'Inter', sans-serif", margin: 0, lineHeight: 1.4 }}>
+          <span style={{ color: "#D4379A", fontWeight: 700 }}>CONFERENCIA GRATUITA</span>
+          {" · "}30 de abril, Acapulco
+          {" · "}
+          <em>"Vigía — Cómo encontré mi propósito en la oscuridad"</em>
+          {" · "}Entrada gratuita | Auditorio Facultad
+        </p>
+        <Link href="/contacto" style={{
+          background: "#D4379A",
+          color: "white",
+          textDecoration: "none",
+          padding: "5px 14px",
+          fontSize: "0.72rem",
+          fontWeight: 700,
+          letterSpacing: "0.06em",
+          fontFamily: "'Inter', sans-serif",
+          whiteSpace: "nowrap",
+          flexShrink: 0,
+          borderRadius: "2px",
+        }}>
+          Quiero asistir
+        </Link>
+      </div>
+
+      {/* NAV BAR */}
       <div style={{
         maxWidth: "1200px", margin: "0 auto", padding: "0 32px",
         height: "72px", display: "flex", alignItems: "center", justifyContent: "space-between",
+        borderBottom: "1px solid rgba(201,169,110,0.15)",
       }}>
         <Link href="/" style={{ textDecoration: "none" }}>
           <span style={{
@@ -56,7 +94,7 @@ export default function Header() {
             </Link>
           ))}
           <Link href="/contacto" className="btn-primary" style={{ fontSize: "0.8rem", padding: "10px 24px" }}>
-            Contratame
+            Hagámoslo Juntas
           </Link>
         </nav>
 
@@ -78,7 +116,7 @@ export default function Header() {
           ))}
           <Link href="/contacto" onClick={() => setMenuOpen(false)} className="btn-primary"
             style={{ display: "inline-block", marginTop: "16px", fontSize: "0.85rem" }}>
-            Contratame
+            Hagámoslo Juntas
           </Link>
         </div>
       )}

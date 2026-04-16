@@ -10,10 +10,10 @@ export default function Footer() {
               Miriam Tenorio Velazco
             </h3>
             <p style={{ color: "#A89880", fontSize: "0.9rem", lineHeight: 1.8, marginBottom: "8px" }}>
-              Doctora en Administración Pública
+              Doctoranda en Administración Pública
             </p>
             <p style={{ color: "#A89880", fontSize: "0.9rem", lineHeight: 1.8, marginBottom: "20px" }}>
-              Autora · Conferencista · Docente UAGro
+              Autora · Conferencista · Mentora · Docente UAGro
             </p>
             <p style={{ color: "#A89880", fontSize: "0.85rem", fontStyle: "italic", borderLeft: "2px solid #C9A96E", paddingLeft: "16px" }}>
               "Todo lo que se cree, se crea."
@@ -44,11 +44,12 @@ export default function Footer() {
               Contacto
             </h4>
             <p style={{ color: "#A89880", fontSize: "0.9rem", marginBottom: "20px" }}>miriteve16@gmail.com</p>
-            <div style={{ display: "flex", gap: "16px" }}>
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               {[
                 { href: "https://www.instagram.com/miriamtenorio1", label: "IG" },
-                { href: "https://youtube.com/@miriamtenoriovelazco", label: "YT" },
+                { href: "https://youtube.com/@miritenorio", label: "YT" },
                 { href: "https://www.tiktok.com/@miritenorio", label: "TK" },
+                { href: "https://www.facebook.com/MiriamTenorioVelazco", label: "FB" },
               ].map(s => (
                 <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" style={{
                   color: "#A89880", textDecoration: "none", fontSize: "0.8rem", fontWeight: 600,
@@ -61,7 +62,7 @@ export default function Footer() {
 
         <div style={{ borderTop: "1px solid rgba(201,169,110,0.15)", paddingTop: "24px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
           <p style={{ color: "#A89880", fontSize: "0.8rem" }}>
-            © 2025 Miriam Tenorio Velazco. Todos los derechos reservados.
+            © 2026 Miriam Tenorio Velazco. Todos los derechos reservados.
           </p>
           <p style={{ color: "rgba(201,169,110,0.15)", fontSize: "0.8rem" }}>
             Mexico

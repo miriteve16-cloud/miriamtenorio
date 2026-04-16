@@ -5,11 +5,11 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Miriam Tenorio Velazco | Doctora, Autora y Conferencista",
+    default: "Miriam Tenorio Velazco | Doctoranda, Autora, Mentora y Conferencista",
     template: "%s | Miriam Tenorio Velazco",
   },
   description:
-    "Miriam Tenorio Velazco — Doctora en Administración Pública, autora de 'Mujer, eres la obra del Maestro' y conferencista. Liderazgo femenino con base académica, experiencia institucional y fe.",
+    "Miriam Tenorio Velazco — Doctoranda en Administración Pública, autora de 'Mujer, eres la obra del Maestro' y conferencista. Liderazgo femenino con base académica, experiencia institucional y fe.",
   keywords: [
     "Miriam Tenorio Velazco",
     "Doctora Administración Pública",
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     locale: "es_MX",
     url: "https://miriamtenorio.com",
     siteName: "Miriam Tenorio Velazco",
-    title: "Miriam Tenorio Velazco | Doctora, Autora y Conferencista",
-    description: "Doctora en Administración Pública, autora y conferencista. Liderazgo femenino con base académica, experiencia institucional y fe.",
+    title: "Miriam Tenorio Velazco | Doctoranda, Autora, Mentora y Conferencista",
+    description: "Doctoranda en Administración Pública, autora y conferencista. Liderazgo femenino con base académica, experiencia institucional y fe.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Miriam Tenorio Velazco" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Miriam Tenorio Velazco | Doctora, Autora y Conferencista",
-    description: "Doctora en Administración Pública, autora y conferencista. Liderazgo femenino con base académica y fe.",
+    title: "Miriam Tenorio Velazco | Doctoranda, Autora, Mentora y Conferencista",
+    description: "Doctoranda en Administración Pública, autora y conferencista. Liderazgo femenino con base académica y fe.",
     images: ["/og-image.jpg"],
     creator: "@miriamtenorio1",
   },
@@ -51,8 +51,8 @@ const personSchema = {
   alternateName: "Dra. Miriam Tenorio",
   url: "https://miriamtenorio.com",
   image: "https://miriamtenorio.com/miriam-tenorio.jpg",
-  description: "Doctora en Administración Pública, autora de 'Mujer, eres la obra del Maestro' y conferencista mexicana. Creadora del método METAMORFOSIS de liderazgo personal.",
-  jobTitle: "Doctora, Autora y Conferencista",
+  description: "Doctoranda en Administración Pública, autora de 'Mujer, eres la obra del Maestro' y conferencista mexicana. Creadora del método METAMORFOSIS de liderazgo personal.",
+  jobTitle: "Doctoranda, Autora, Mentora y Conferencista",
   nationality: { "@type": "Country", name: "México" },
   alumniOf: [
     { "@type": "CollegeOrUniversity", name: "Universidad Autónoma de Guerrero" }
@@ -66,8 +66,8 @@ const personSchema = {
   sameAs: [
     "https://www.instagram.com/miriamtenorio1",
     "https://www.tiktok.com/@miritenorio",
-    "https://youtube.com/@miriamtenoriovelazco",
-    "https://www.facebook.com/share/1EFHUshA6C/",
+    "https://youtube.com/@miritenorio",
+    "https://www.facebook.com/MiriamTenorioVelazco",
   ],
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://miriamtenorio.com" },
 };
