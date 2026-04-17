@@ -31,7 +31,7 @@ export default function Header() {
 
       {/* BANNER CONFERENCIA */}
       <div style={{
-        background: "linear-gradient(135deg, #2D1458 0%, #4A0E6B 100%)",
+        background: "#3B1050",
         borderBottom: "1px solid rgba(212,55,154,0.3)",
         padding: "9px 24px",
         textAlign: "center",
@@ -41,14 +41,13 @@ export default function Header() {
         gap: "20px",
         flexWrap: "wrap",
       }}>
-        <p style={{ color: "#F5F0E8", fontSize: "0.78rem", fontFamily: "'Inter', sans-serif", margin: 0, lineHeight: 1.4 }}>
+        <p style={{ color: "#ffffff", fontSize: "0.78rem", fontFamily: "'Inter', sans-serif", margin: 0, lineHeight: 1.4 }}>
           <span style={{ color: "#D4379A", fontWeight: 700 }}>CONFERENCIA GRATUITA</span>
-          {" · "}30 de abril, Acapulco
           {" · "}
-          <em>"Vigía — Cómo encontré mi propósito en la oscuridad"</em>
-          {" · "}Entrada gratuita | Auditorio Facultad
+          <strong style={{ color: "#ffffff" }}>"METAMORFOSIS: De la transformación personal al negocio que sueñas"</strong>
+          {" · "}30 de abril, Acapulco · Entrada gratuita | Auditorio Facultad UAGro
         </p>
-        <Link href="/contacto" style={{
+        <Link href="/registro" style={{
           background: "#D4379A",
           color: "white",
           textDecoration: "none",
@@ -61,7 +60,7 @@ export default function Header() {
           flexShrink: 0,
           borderRadius: "2px",
         }}>
-          Quiero asistir
+          Quiero registrarme
         </Link>
       </div>
 
