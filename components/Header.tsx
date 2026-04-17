@@ -33,32 +33,38 @@ export default function Header() {
       <div style={{
         background: "#3B1050",
         borderBottom: "1px solid rgba(212,55,154,0.3)",
-        padding: "9px 24px",
+        padding: "14px 24px",
         textAlign: "center",
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
-        gap: "20px",
-        flexWrap: "wrap",
+        gap: "3px",
       }}>
-        <p style={{ color: "#ffffff", fontSize: "0.78rem", fontFamily: "'Inter', sans-serif", margin: 0, lineHeight: 1.4 }}>
-          <span style={{ color: "#D4379A", fontWeight: 700 }}>CONFERENCIA GRATUITA</span>
-          {" · "}
-          <strong style={{ color: "#ffffff" }}>"METAMORFOSIS: De la transformación personal al negocio que sueñas"</strong>
-          {" · "}30 de abril, Acapulco · Entrada gratuita | Auditorio Facultad UAGro
+        <p style={{ color: "#C9A96E", fontSize: "0.67rem", fontWeight: 600, letterSpacing: "0.15em", margin: 0, fontFamily: "'Inter', sans-serif" }}>
+          PRÓXIMA CONFERENCIA GRATUITA
+        </p>
+        <p style={{ color: "#ffffff", fontSize: "1.35rem", fontWeight: 700, margin: "2px 0 0", fontFamily: "'Playfair Display', serif", letterSpacing: "0.08em", lineHeight: 1.1 }}>
+          METAMORFOSIS
+        </p>
+        <p style={{ color: "#ffffff", fontSize: "0.78rem", fontStyle: "italic", margin: "1px 0 0", fontFamily: "'Playfair Display', serif", opacity: 0.9 }}>
+          "De la transformación personal al negocio que sueñas"
+        </p>
+        <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.67rem", fontFamily: "'Inter', sans-serif", margin: "5px 0 0", letterSpacing: "0.06em" }}>
+          30 de abril del 2026 &nbsp;·&nbsp; Entrada Gratuita · Cupo Limitado &nbsp;·&nbsp; Facultad FCA/UAGro · Acapulco
         </p>
         <Link href="/registro" style={{
           background: "#D4379A",
           color: "white",
           textDecoration: "none",
-          padding: "5px 14px",
-          fontSize: "0.72rem",
+          padding: "6px 18px",
+          fontSize: "0.7rem",
           fontWeight: 700,
-          letterSpacing: "0.06em",
+          letterSpacing: "0.08em",
           fontFamily: "'Inter', sans-serif",
           whiteSpace: "nowrap",
-          flexShrink: 0,
           borderRadius: "2px",
+          marginTop: "8px",
+          display: "inline-block",
         }}>
           Quiero registrarme
         </Link>

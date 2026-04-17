@@ -98,11 +98,11 @@ const libroPlaceholder = (
 
 export default function HomePage() {
   return (
-    <div style={{ paddingTop: "120px" }}>
+    <div style={{ paddingTop: "210px" }}>
 
       {/* HERO */}
       <section style={{
-        minHeight: "calc(100vh - 120px)",
+        minHeight: "calc(100vh - 210px)",
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         alignItems: "center",

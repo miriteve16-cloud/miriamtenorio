@@ -34,14 +34,24 @@ export default function RegistroPage() {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     const folio = "MT-" + Math.random().toString(36).substring(2, 7).toUpperCase();
-    setTimeout(() => {
-      setRegistro({ ...form, folio });
-      setLoading(false);
-    }, 800);
+    const datos = { ...form, folio };
+
+    try {
+      await fetch("/api/registro", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(datos),
+      });
+    } catch {
+      // Si falla la API el QR sigue apareciendo
+    }
+
+    setRegistro(datos);
+    setLoading(false);
   };
 
   const handleDescargar = () => {
@@ -110,7 +120,7 @@ export default function RegistroPage() {
     : "";
 
   return (
-    <div style={{ minHeight: "100vh", paddingTop: "120px", paddingBottom: "80px", background: "#0D0618" }}>
+    <div style={{ minHeight: "100vh", paddingTop: "210px", paddingBottom: "80px", background: "#0D0618" }}>
       <div style={{ maxWidth: "560px", margin: "0 auto", padding: "0 24px" }}>
 
         {/* ENCABEZADO */}
