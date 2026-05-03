@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeTxq4gX9CKvpuromN5Hhz1ANk73TcSqF2s4gnxg7Jpum2B3Q/viewform?embedded=true";
+const GFORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSeTxq4gX9CKvpuromN5Hhz1ANk73TcSqF2s4gnxg7Jpum2B3Q/formResponse";
 const WHATSAPP_URL = "https://chat.whatsapp.com/CnKql4iGkMhHZJsoYhYXyI";
 const EVENT_DATE = new Date("2026-05-13T19:00:00-06:00");
 
@@ -64,7 +64,43 @@ function Countdown() {
   );
 }
 
+const inputStyle: React.CSSProperties = {
+  width: "100%",
+  background: "rgba(255,255,255,0.05)",
+  border: "1px solid rgba(212,168,67,0.25)",
+  borderRadius: "4px",
+  color: "#ffffff",
+  padding: "14px 16px",
+  fontSize: "0.95rem",
+  fontFamily: "'Inter', sans-serif",
+  outline: "none",
+  boxSizing: "border-box",
+};
+
 export default function MasterclassPage() {
+  const [form, setForm] = useState({ nombre: "", whatsapp: "", situacion: "", vende: "", frena: "" });
+  const [enviado, setEnviado] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    const fd = new FormData();
+    fd.append("entry.1488884290", form.nombre);
+    fd.append("entry.2087587791", form.whatsapp);
+    fd.append("entry.1107756395", form.situacion);
+    fd.append("entry.964213705", form.vende);
+    fd.append("entry.1581201708", form.frena);
+    try {
+      await fetch(GFORM_ACTION, { method: "POST", mode: "no-cors", body: fd });
+    } catch { /* no-cors siempre "falla" en fetch pero sí envía */ }
+    setEnviado(true);
+    setLoading(false);
+  };
   return (
     <div style={{ background: "#060008", minHeight: "100vh", fontFamily: "'Inter', sans-serif" }}>
 
@@ -345,26 +381,100 @@ export default function MasterclassPage() {
             </p>
           </div>
 
-          {/* Google Form */}
-          <div style={{
-            background: "#ffffff",
-            borderRadius: "8px",
-            overflow: "hidden",
+          {/* Formulario elegante */}
+          {!enviado ? (
+          <form onSubmit={handleSubmit} style={{
+            background: "rgba(255,255,255,0.03)",
             border: "1px solid rgba(212,168,67,0.2)",
+            borderRadius: "8px",
+            padding: "36px 32px",
             boxShadow: "0 8px 40px rgba(0,0,0,0.4)",
           }}>
-            <iframe
-              src={FORM_URL}
-              width="100%"
-              height="620"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              style={{ display: "block" }}
-            >
-              Cargando formulario…
-            </iframe>
+            <div style={{ marginBottom: "20px" }}>
+              <label style={{ display: "block", color: "#D4A843", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "8px", fontFamily: "'Inter', sans-serif" }}>
+                Nombre completo *
+              </label>
+              <input name="nombre" required value={form.nombre} onChange={handleChange} placeholder="Tu nombre completo" style={inputStyle} />
+            </div>
+
+            <div style={{ marginBottom: "20px" }}>
+              <label style={{ display: "block", color: "#D4A843", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "8px", fontFamily: "'Inter', sans-serif" }}>
+                WhatsApp (con lada) *
+              </label>
+              <input name="whatsapp" required value={form.whatsapp} onChange={handleChange} placeholder="+52 744 000 0000" style={inputStyle} />
+            </div>
+
+            <div style={{ marginBottom: "20px" }}>
+              <label style={{ display: "block", color: "#D4A843", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "12px", fontFamily: "'Inter', sans-serif" }}>
+                ¿En qué situación estás? *
+              </label>
+              {["Tengo una idea de negocio", "Ya tengo un negocio", "Quiero empezar pero no sé qué hacer"].map(op => (
+                <label key={op} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "10px", cursor: "pointer" }}>
+                  <input type="radio" name="situacion" value={op} required onChange={handleChange}
+                    style={{ accentColor: "#D4A843", width: "16px", height: "16px", flexShrink: 0 }} />
+                  <span style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem" }}>{op}</span>
+                </label>
+              ))}
+            </div>
+
+            <div style={{ marginBottom: "20px" }}>
+              <label style={{ display: "block", color: "#D4A843", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "8px", fontFamily: "'Inter', sans-serif" }}>
+                ¿Qué vendes o te gustaría vender? *
+              </label>
+              <input name="vende" required value={form.vende} onChange={handleChange} placeholder="Ej: ropa, servicios, comida..." style={inputStyle} />
+            </div>
+
+            <div style={{ marginBottom: "32px" }}>
+              <label style={{ display: "block", color: "#D4A843", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "12px", fontFamily: "'Inter', sans-serif" }}>
+                ¿Qué es lo que más te está frenando hoy? *
+              </label>
+              {["No sé por dónde empezar", "No vendo lo que quisiera", "No tengo claro a quién vender", "No sé cómo estructurar mi negocio"].map(op => (
+                <label key={op} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "10px", cursor: "pointer" }}>
+                  <input type="radio" name="frena" value={op} required onChange={handleChange}
+                    style={{ accentColor: "#D4A843", width: "16px", height: "16px", flexShrink: 0 }} />
+                  <span style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem" }}>{op}</span>
+                </label>
+              ))}
+            </div>
+
+            <button type="submit" disabled={loading} style={{
+              width: "100%",
+              background: loading ? "rgba(212,168,67,0.4)" : "linear-gradient(135deg,#D4A843,#C9A96E)",
+              color: "#060008",
+              border: "none",
+              padding: "18px",
+              fontSize: "0.9rem",
+              fontWeight: 800,
+              letterSpacing: "0.08em",
+              fontFamily: "'Inter', sans-serif",
+              cursor: loading ? "not-allowed" : "pointer",
+              borderRadius: "4px",
+              boxShadow: "0 4px 20px rgba(212,168,67,0.25)",
+            }}>
+              {loading ? "ENVIANDO..." : "✨ QUIERO MI LUGAR GRATIS"}
+            </button>
+          </form>
+          ) : (
+          <div style={{
+            background: "rgba(212,168,67,0.06)",
+            border: "1px solid rgba(212,168,67,0.3)",
+            borderRadius: "8px",
+            padding: "48px 32px",
+            textAlign: "center",
+          }}>
+            <div style={{ fontSize: "3rem", marginBottom: "16px" }}>🎉</div>
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.6rem", color: "#D4A843", marginBottom: "12px" }}>
+              ¡Ya estás registrada!
+            </h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.95rem", lineHeight: 1.7, marginBottom: "8px" }}>
+              {form.nombre}, tu lugar está reservado para el<br />
+              <strong style={{ color: "#ffffff" }}>Miércoles 13 de mayo a las 7:00 PM CDMX.</strong>
+            </p>
+            <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.85rem" }}>
+              Ahora completa el paso 2 👇
+            </p>
           </div>
+          )}
 
           {/* Paso 2 - WhatsApp */}
           <div style={{
