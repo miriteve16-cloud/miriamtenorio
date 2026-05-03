@@ -7,10 +7,10 @@ const WHATSAPP_URL = "https://chat.whatsapp.com/CnKql4iGkMhHZJsoYhYXyI";
 const EVENT_DATE = new Date("2026-05-13T19:00:00-06:00");
 
 const pilares = [
-  { num: "01", titulo: "Claridad", desc: "Descubre exactamente qué negocio es para ti, a quién sirves y cuál es tu propuesta de valor única.", icon: "🎯" },
-  { num: "02", titulo: "Estrategia", desc: "El mapa de ruta probado para pasar de idea a primeras ventas sin perder tiempo ni dinero.", icon: "🗺️" },
-  { num: "03", titulo: "Sistema", desc: "Construye los procesos que hacen que tu negocio funcione incluso cuando tú no estás.", icon: "⚙️" },
-  { num: "04", titulo: "Resultados", desc: "Acciones concretas que generan ingresos reales desde el primer día.", icon: "🚀" },
+  { num: "01", titulo: "Claridad", desc: "Para tomar decisiones correctas.", icon: "💡" },
+  { num: "02", titulo: "Estrategia", desc: "Para atraer a las personas correctas y venderles.", icon: "🎯" },
+  { num: "03", titulo: "Sistema", desc: "Para que tu negocio funcione y crezca cada día.", icon: "⚙️" },
+  { num: "04", titulo: "Resultados", desc: "Para generar ingresos reales y construir la vida que quieres.", icon: "📈" },
 ];
 
 function Countdown() {
@@ -156,6 +156,18 @@ export default function MasterclassPage() {
             De Idea a Negocio<br />
             <span style={{ color: "#D4A843" }}>Rentable en 4 Días</span>
           </h1>
+
+          {/* Subtítulo */}
+          <p style={{
+            color: "rgba(255,255,255,0.72)",
+            fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
+            lineHeight: 1.6,
+            maxWidth: "580px",
+            margin: "0 auto 32px",
+            fontFamily: "'Inter', sans-serif",
+          }}>
+            El sistema que nadie te enseña para estructurar un negocio que genere ingresos reales
+          </p>
 
           {/* Fecha */}
           <div style={{
