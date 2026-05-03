@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -72,7 +73,11 @@ const personSchema = {
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://miriamtenorio.com" },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const headersList = await headers();
+  const host = headersList.get("host") || "";
+  const isLanding = host.startsWith("masterclass.");
+
   return (
     <html lang="es">
       <head>
@@ -80,9 +85,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
-        <Header />
+        {!isLanding && <Header />}
         <main>{children}</main>
-        <Footer />
+        {!isLanding && <Footer />}
       </body>
     </html>
   );
