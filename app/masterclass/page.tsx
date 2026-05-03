@@ -145,18 +145,19 @@ export default function MasterclassPage() {
 
           {/* Foto */}
           <div style={{
-            width: "140px",
-            height: "140px",
+            width: "160px",
+            height: "160px",
             borderRadius: "50%",
-            background: "linear-gradient(135deg, #1A0030, #3B1050)",
             border: "3px solid #D4A843",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
             margin: "0 auto 20px",
-            boxShadow: "0 0 40px rgba(212,168,67,0.2)",
+            boxShadow: "0 0 40px rgba(212,168,67,0.25)",
+            overflow: "hidden",
           }}>
-            <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.4rem", fontWeight: 700, color: "#D4A843" }}>MT</span>
+            <img
+              src="/miriam-foto.jpg"
+              alt="Miriam Tenorio Velazco"
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
+            />
           </div>
 
           <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem", marginBottom: "8px" }}>

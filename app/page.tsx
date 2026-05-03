@@ -48,24 +48,13 @@ const photoPlaceholder = (height: string) => (
     background: "#1A0D2E",
     border: "1px solid rgba(201,169,110,0.2)",
     borderRadius: "4px",
-    display: "flex",
-    flexDirection: "column" as const,
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "16px",
+    overflow: "hidden",
   }}>
-    <div style={{
-      width: "110px", height: "110px",
-      borderRadius: "50%",
-      background: "rgba(201,169,110,0.08)",
-      border: "2px solid rgba(201,169,110,0.25)",
-      display: "flex", alignItems: "center", justifyContent: "center",
-    }}>
-      <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#C9A96E" }}>MT</span>
-    </div>
-    <p style={{ color: "rgba(201,169,110,0.4)", fontSize: "0.75rem", letterSpacing: "0.12em", fontFamily: "'Inter', sans-serif", margin: 0 }}>
-      Foto próximamente
-    </p>
+    <img
+      src="/miriam-foto.jpg"
+      alt="Miriam Tenorio Velazco"
+      style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
+    />
   </div>
 );
 
