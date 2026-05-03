@@ -355,8 +355,14 @@ export default function MasterclassPage() {
         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.6rem, 4vw, 2.2rem)", color: "#ffffff", marginBottom: "24px" }}>
           Miriam Tenorio Velazco
         </h2>
-        <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: 1.9, fontSize: "0.95rem", marginBottom: "32px" }}>
-          Doctoranda en Administración Pública, autora de <em style={{ color: "#D4A843" }}>"Mujer, eres la obra del Maestro"</em>, conferencista y mentora de mujeres emprendedoras. Con más de 15 años de trayectoria entre la academia, el gobierno y el mundo empresarial, Miriam acompaña a mujeres a transformar sus ideas en negocios reales con propósito.
+        <p style={{ color: "rgba(255,255,255,0.72)", lineHeight: 1.9, fontSize: "0.95rem", marginBottom: "20px" }}>
+          Mentora de negocios y autora del libro <em style={{ color: "#D4A843" }}>"Mujer, eres la obra del Maestro"</em>.
+        </p>
+        <p style={{ color: "rgba(255,255,255,0.72)", lineHeight: 1.9, fontSize: "0.95rem", marginBottom: "20px" }}>
+          Acompaño a personas que han decidido dejar de improvisar y quieren estructurar un negocio real (físico o digital) con claridad, propósito y dirección.
+        </p>
+        <p style={{ color: "rgba(255,255,255,0.72)", lineHeight: 1.9, fontSize: "0.95rem", marginBottom: "32px" }}>
+          Mi experiencia combina más de 15 años en la academia, el gobierno y el mundo empresarial, pero, sobre todo, la práctica real de construir y sostener negocios desde cero.
         </p>
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           {["15+ años de experiencia", "Autora publicada", "Doctoranda UAGro", "Mentora activa"].map((tag) => (
