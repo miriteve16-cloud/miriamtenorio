@@ -4,7 +4,7 @@ import Link from "next/link";
 const stats = [
   { value: "15+", label: "Años de trayectoria" },
   { value: "1", label: "Libro publicado en Amazon" },
-  { value: "Dra.", label: "Administración Pública" },
+  { value: "Doc.", label: "Doctoranda en curso" },
   { value: "2", label: "Estados impactados" },
 ];
 
@@ -64,34 +64,23 @@ const libroPlaceholder = (
     background: "#1A0D2E",
     border: "1px solid rgba(201,169,110,0.2)",
     borderRadius: "4px",
-    display: "flex",
-    flexDirection: "column" as const,
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "20px",
+    overflow: "hidden",
   }}>
-    <div style={{
-      width: "100px", height: "140px",
-      background: "rgba(201,169,110,0.08)",
-      border: "2px solid rgba(201,169,110,0.25)",
-      display: "flex", alignItems: "center", justifyContent: "center",
-      borderRadius: "2px",
-    }}>
-      <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", color: "#C9A96E" }}>📖</span>
-    </div>
-    <p style={{ color: "rgba(201,169,110,0.4)", fontSize: "0.75rem", letterSpacing: "0.12em", fontFamily: "'Inter', sans-serif", margin: 0 }}>
-      Portada próximamente
-    </p>
+    <img
+      src="/portada-libro.jpg"
+      alt="Mujer, eres la obra del Maestro — Miriam Tenorio Velazco"
+      style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
+    />
   </div>
 );
 
 export default function HomePage() {
   return (
-    <div style={{ paddingTop: "210px" }}>
+    <div style={{ paddingTop: "90px" }}>
 
       {/* HERO */}
       <section style={{
-        minHeight: "calc(100vh - 210px)",
+        minHeight: "calc(100vh - 90px)",
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         alignItems: "center",
@@ -283,17 +272,14 @@ export default function HomePage() {
         <div style={{ maxWidth: "860px", margin: "0 auto", textAlign: "center" }}>
           <span className="section-label">Mentoría</span>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", color: "#F5F0E8", marginBottom: "20px" }}>
-            Mentoría Grupal para Mujeres Emprendedoras
+            Método Impulso — De Idea a Negocio Rentable
           </h2>
           <div className="divider" style={{ margin: "0 auto 28px" }} />
-          <p style={{ color: "#A89880", lineHeight: 1.9, marginBottom: "20px", fontSize: "1rem" }}>
-            Acompañamiento mensual para mujeres que quieren transformar su vida y su negocio. Sesiones en vivo, comunidad de apoyo y herramientas prácticas.
-          </p>
-          <p style={{ color: "#D4379A", fontWeight: 600, fontSize: "1rem", marginBottom: "40px", fontFamily: "'Inter', sans-serif" }}>
-            Plazas limitadas para el 2 de junio. Escríbeme y te cuento todo.
+          <p style={{ color: "#A89880", lineHeight: 1.9, marginBottom: "40px", fontSize: "1rem" }}>
+            Mentoría grupal de 4 semanas con sesiones en vivo, plantillas, prompts de IA y acompañamiento real.
           </p>
           <Link href="/contacto" className="btn-primary">
-            Hagámoslo Juntas
+            Quiero saber más
           </Link>
         </div>
       </section>

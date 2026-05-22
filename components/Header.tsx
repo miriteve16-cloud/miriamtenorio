@@ -29,47 +29,6 @@ export default function Header() {
       transition: "all 0.3s ease",
     }}>
 
-      {/* BANNER CONFERENCIA */}
-      <div style={{
-        background: "#3B1050",
-        borderBottom: "1px solid rgba(212,55,154,0.3)",
-        padding: "14px 24px",
-        textAlign: "center",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "3px",
-      }}>
-        <p style={{ color: "#C9A96E", fontSize: "0.67rem", fontWeight: 600, letterSpacing: "0.15em", margin: 0, fontFamily: "'Inter', sans-serif" }}>
-          PRÓXIMA CONFERENCIA GRATUITA
-        </p>
-        <p style={{ color: "#ffffff", fontSize: "1.35rem", fontWeight: 700, margin: "2px 0 0", fontFamily: "'Playfair Display', serif", letterSpacing: "0.08em", lineHeight: 1.1 }}>
-          METAMORFOSIS
-        </p>
-        <p style={{ color: "#ffffff", fontSize: "0.78rem", fontStyle: "italic", margin: "1px 0 0", fontFamily: "'Playfair Display', serif", opacity: 0.9 }}>
-          "De la transformación personal al negocio que sueñas"
-        </p>
-        <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.67rem", fontFamily: "'Inter', sans-serif", margin: "5px 0 0", letterSpacing: "0.06em" }}>
-          30 de abril del 2026 &nbsp;·&nbsp; Entrada Gratuita · Cupo Limitado &nbsp;·&nbsp; Facultad FCA/UAGro · Acapulco
-        </p>
-        <Link href="/registro" style={{
-          background: "#D4379A",
-          color: "white",
-          textDecoration: "none",
-          padding: "6px 18px",
-          fontSize: "0.7rem",
-          fontWeight: 700,
-          letterSpacing: "0.08em",
-          fontFamily: "'Inter', sans-serif",
-          whiteSpace: "nowrap",
-          borderRadius: "2px",
-          marginTop: "8px",
-          display: "inline-block",
-        }}>
-          Quiero registrarme
-        </Link>
-      </div>
-
       {/* NAV BAR */}
       <div style={{
         maxWidth: "1200px", margin: "0 auto", padding: "0 32px",
