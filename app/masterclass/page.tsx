@@ -140,7 +140,7 @@ export default function MasterclassPage() {
           }}>
             <span style={{ width: "6px", height: "6px", background: "#D4A843", borderRadius: "50%", display: "inline-block" }} />
             <span style={{ color: "#D4A843", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.15em" }}>
-              MASTERCLASS 100% GRATUITA
+              PRÓXIMA EDICIÓN — FECHA POR CONFIRMAR
             </span>
           </div>
 
@@ -175,16 +175,16 @@ export default function MasterclassPage() {
             flexDirection: "column" as const,
             alignItems: "center",
             background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,255,255,0.08)",
+            border: "1px solid rgba(212,168,67,0.2)",
             borderRadius: "8px",
             padding: "16px 32px",
             marginBottom: "40px",
           }}>
             <span style={{ color: "#D4A843", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.15em", marginBottom: "4px" }}>
-              MIÉRCOLES 13 DE MAYO DEL 2026
+              NUEVA FECHA PRÓXIMAMENTE
             </span>
-            <span style={{ color: "#ffffff", fontSize: "1.4rem", fontWeight: 700, fontFamily: "'Playfair Display', serif" }}>
-              7:00 PM hora CDMX
+            <span style={{ color: "#ffffff", fontSize: "1.1rem", fontWeight: 600, fontFamily: "'Playfair Display', serif" }}>
+              Regístrate y te avisamos
             </span>
             <span style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.72rem", marginTop: "4px" }}>
               En vivo · Acceso gratuito
@@ -230,15 +230,15 @@ export default function MasterclassPage() {
             marginBottom: "16px",
             transition: "transform 0.2s",
           }}>
-            ✨ QUIERO MI LUGAR GRATIS
+            ✨ AVÍSAME DE LA PRÓXIMA EDICIÓN
           </a>
           <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "0.72rem", letterSpacing: "0.08em" }}>
-            CUPOS LIMITADOS · REGÍSTRATE AHORA
+            GRATIS · CUPOS LIMITADOS
           </p>
         </div>
       </section>
 
-      {/* COUNTDOWN */}
+      {/* AVISO PRÓXIMA EDICIÓN */}
       <section style={{
         background: "#0A000E",
         borderTop: "1px solid rgba(212,168,67,0.1)",
@@ -246,10 +246,12 @@ export default function MasterclassPage() {
         padding: "36px 24px",
         textAlign: "center",
       }}>
-        <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.7rem", letterSpacing: "0.15em", marginBottom: "20px" }}>
-          LA MASTERCLASS COMIENZA EN
+        <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.7rem", letterSpacing: "0.15em", marginBottom: "10px" }}>
+          PRIMERA EDICIÓN COMPLETADA
         </p>
-        <Countdown />
+        <p style={{ color: "#D4A843", fontSize: "1rem", fontFamily: "'Playfair Display', serif", fontWeight: 600 }}>
+          La próxima edición está por anunciarse — regístrate para no perdértela
+        </p>
       </section>
 
       {/* LOS 4 PILARES */}
@@ -392,7 +394,7 @@ export default function MasterclassPage() {
               PASO 1 DE 2
             </p>
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.6rem, 4vw, 2.2rem)", color: "#ffffff", marginBottom: "12px" }}>
-              Reserva tu lugar ahora
+              Avísame de la próxima edición
             </h2>
             <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.85rem" }}>
               Es gratis · Tarda menos de 1 minuto
@@ -469,7 +471,7 @@ export default function MasterclassPage() {
               borderRadius: "4px",
               boxShadow: "0 4px 20px rgba(212,168,67,0.25)",
             }}>
-              {loading ? "ENVIANDO..." : "✨ QUIERO MI LUGAR GRATIS"}
+              {loading ? "ENVIANDO..." : "✨ AVÍSAME DE LA PRÓXIMA EDICIÓN"}
             </button>
           </form>
           ) : (
@@ -485,11 +487,11 @@ export default function MasterclassPage() {
               ¡Ya estás registrada!
             </h3>
             <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.95rem", lineHeight: 1.7, marginBottom: "8px" }}>
-              {form.nombre}, tu lugar está reservado para el<br />
-              <strong style={{ color: "#ffffff" }}>Miércoles 13 de mayo a las 7:00 PM CDMX.</strong>
+              {form.nombre}, quedaste en la lista.<br />
+              <strong style={{ color: "#ffffff" }}>Te avisaré por WhatsApp en cuanto confirme la próxima fecha.</strong>
             </p>
             <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.85rem" }}>
-              Ahora completa el paso 2 👇
+              Únete al grupo para no perderte nada 👇
             </p>
           </div>
           )}
@@ -510,7 +512,7 @@ export default function MasterclassPage() {
               Únete al grupo de WhatsApp
             </h3>
             <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.85rem", marginBottom: "28px", lineHeight: 1.7 }}>
-              Aquí recibirás el enlace de acceso, recordatorios y material exclusivo antes de la masterclass.
+              Aquí recibirás el anuncio de la nueva fecha, recordatorios y material exclusivo.
             </p>
             <a
               href={WHATSAPP_URL}
