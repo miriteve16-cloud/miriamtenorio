@@ -392,6 +392,49 @@ export default function HomePage() {
       </section>
 
       {/* REGALO GRATUITO */}
+      {/* ACAPULCO CON PROPÓSITO */}
+      <section style={{
+        background: "linear-gradient(180deg, #060008 0%, #1A0030 100%)",
+        borderTop: "1px solid rgba(201,169,110,0.15)",
+        borderBottom: "1px solid rgba(201,169,110,0.15)",
+        padding: "80px 32px",
+        textAlign: "center",
+      }}>
+        <div style={{ maxWidth: "620px", margin: "0 auto" }}>
+          <span style={{
+            display: "inline-block",
+            border: "1px solid rgba(201,169,110,0.35)",
+            color: "#C9A96E",
+            fontSize: "0.72rem",
+            fontWeight: 600,
+            letterSpacing: "0.15em",
+            padding: "6px 18px",
+            fontFamily: "'Inter', sans-serif",
+            marginBottom: "24px",
+          }}>COMUNIDAD CIUDADANA</span>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,4vw,2.8rem)", color: "#F5F0E8", marginBottom: "16px", lineHeight: 1.2 }}>
+            Acapulco con <span style={{ color: "#C9A96E" }}>Propósito</span>
+          </h2>
+          <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: 1.9, marginBottom: "36px", fontSize: "1rem" }}>
+            Una comunidad de personas comprometidas con construir un Acapulco más digno. Ciudadanas y ciudadanos que actúan desde la convicción, colonia por colonia.
+          </p>
+          <Link href="/acapulco-con-proposito" style={{
+            display: "inline-block",
+            background: "linear-gradient(135deg, #C9A96E, #D4A843)",
+            color: "#060008",
+            textDecoration: "none",
+            padding: "16px 44px",
+            fontWeight: 800,
+            fontSize: "0.88rem",
+            letterSpacing: "0.1em",
+            fontFamily: "'Inter', sans-serif",
+            borderRadius: "4px",
+          }}>
+            SÚMATE A LA COMUNIDAD
+          </Link>
+        </div>
+      </section>
+
       <section style={{
         background: "linear-gradient(135deg, #1A0D2E 0%, #2D1458 100%)",
         borderTop: "1px solid rgba(212,55,154,0.2)",

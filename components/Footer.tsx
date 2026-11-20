@@ -28,6 +28,7 @@ export default function Footer() {
               { href: "/sobre-mi", label: "Sobre mi" },
               { href: "/conferencias", label: "Conferencias" },
               { href: "/libro", label: "Mi Libro" },
+              { href: "/acapulco-con-proposito", label: "Acapulco con Propósito" },
               { href: "/blog", label: "Blog" },
               { href: "/prensa", label: "Prensa" },
               { href: "/contacto", label: "Contacto" },
