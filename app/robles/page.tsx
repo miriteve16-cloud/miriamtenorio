@@ -2,9 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const WHATSAPP_GROUP = "https://chat.whatsapp.com/XXXXXXXXXXXXXXXXXX"; // ← reemplazar con link real
-
-const GFORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSeTxq4gX9CKvpuromN5Hhz1ANk73TcSqF2s4gnxg7Jpum2B3Q/formResponse";
+const WHATSAPP_GROUP = "https://chat.whatsapp.com/H6SzhFe7NEaGoztJuEaOBB";
 
 const inputStyle: React.CSSProperties = {
   width: "100%",
@@ -31,14 +29,13 @@ export default function RoblesPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    const fd = new FormData();
-    fd.append("entry.1488884290", form.nombre);
-    fd.append("entry.2087587791", form.whatsapp);
-    fd.append("entry.964213705", form.colonia);
-    fd.append("entry.1581201708", form.problema);
     try {
-      await fetch(GFORM_ACTION, { method: "POST", mode: "no-cors", body: fd });
-    } catch { /* no-cors siempre falla en fetch pero sí envía */ }
+      await fetch("/api/robles", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+    } catch { /* continúa aunque falle el correo */ }
     setEnviado(true);
     setLoading(false);
   };
