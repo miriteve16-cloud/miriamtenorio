@@ -64,7 +64,7 @@ export async function POST(req: NextRequest) {
               </div>
             </div>
             <div class="footer">
-              Registro recibido el ${fecha} · miriamtenorio.com/robles
+              Registro recibido el ${fecha} · miriamtenorio.com/acapulco-con-proposito
             </div>
           </div>
         </body>

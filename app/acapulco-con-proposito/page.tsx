@@ -91,8 +91,8 @@ export default function RoblesPage() {
             lineHeight: 1.1,
             marginBottom: "16px",
           }}>
-            Robles de<br />
-            <span style={{ color: "#C9A96E" }}>Justicia</span>
+            Acapulco con<br />
+            <span style={{ color: "#C9A96E" }}>Propósito</span>
           </h1>
 
           {/* Cita bíblica */}
@@ -377,7 +377,7 @@ export default function RoblesPage() {
         fontSize: "0.78rem",
         fontFamily: "'Inter', sans-serif",
       }}>
-        © 2026 Miriam Tenorio Velazco · <Link href="/" style={{ color: "rgba(201,169,110,0.5)", textDecoration: "none" }}>miriamtenorio.com</Link>
+        Acapulco con Propósito · <Link href="/" style={{ color: "rgba(201,169,110,0.5)", textDecoration: "none" }}>miriamtenorio.com</Link>
       </div>
 
     </div>
