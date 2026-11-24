@@ -108,9 +108,9 @@ export default function SobreMiPage() {
 
       {/* Hero */}
       <section style={{
-        padding: "100px 24px 60px",
+        padding: "80px 24px 40px",
         textAlign: "center",
-        background: "radial-gradient(ellipse 70% 50% at 50% 30%, rgba(124,58,237,0.15) 0%, transparent 70%)",
+        background: "radial-gradient(ellipse 70% 30% at 50% 20%, rgba(124,58,237,0.12) 0%, transparent 70%)",
       }}>
         <div style={{ maxWidth: "760px", margin: "0 auto" }}>
           <div style={{ color: "#a78bfa", fontSize: "0.85rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "16px" }}>
