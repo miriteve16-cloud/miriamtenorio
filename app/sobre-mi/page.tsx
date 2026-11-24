@@ -3,46 +3,67 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Sobre Mí | Miriam Tenorio Velazco",
+  title: "Mi Historia | Miriam Tenorio Velazco",
   description:
-    "Conoce la historia real de Miriam Tenorio Velazco: empresaria, autora y coach de negocios que reconstruyó su vida desde la fe, la disciplina y la verdad.",
+    "Empresaria, autora, mentora de negocios, conferencista y docente universitaria. Conoce la historia real de Miriam Tenorio Velazco.",
   openGraph: {
-    title: "Sobre Mí | Miriam Tenorio Velazco",
-    description: "La historia real de una mujer que tocó fondo y decidió reconstruir todo.",
+    title: "Mi Historia | Miriam Tenorio Velazco",
+    description: "Una vida construida con propósito, fe y transformación real.",
     url: "https://miriamtenorio.com.mx/sobre-mi",
   },
 };
 
-const timeline = [
+const trayectoria = [
   {
-    año: "El inicio",
-    titulo: "Una vida que parecía perfecta",
-    desc: "Como muchas mujeres, Miriam construyó una vida exterior que parecía sólida. Empresa, familia, proyectos. Pero por dentro, algo no cuadraba.",
+    titulo: "La preparación como herramienta de transformación",
+    items: [
+      "Licenciada en Comunicación y Relaciones Públicas.",
+      "Maestra en Mercadotecnia.",
+      "Estudios de Doctorado en Administración Pública.",
+      "Docente en la Universidad Hipócrates.",
+      "Catedrática de nivel maestría en INDESAG.",
+      "Docente y Coordinadora de Identidad e Imagen en la Universidad Autónoma de Guerrero.",
+    ],
   },
   {
-    año: "El fondo",
-    titulo: "Tocar fondo",
-    desc: "Llegó el momento más oscuro. Un punto de quiebre donde las máscaras ya no alcanzaban. Fue el comienzo del cambio real, aunque en ese momento dolía demasiado para entenderlo.",
+    titulo: "El servicio público como vocación",
+    items: [
+      "Asesora de la Dirección General de Desarrollo Económico del Ayuntamiento de Acapulco, 2015–2018.",
+      "Candidata de Morena a diputada local por el Distrito 7 de Acapulco en 2021.",
+      "Directora General de Acciones Prioritarias y Gestión Social de la Secretaría de Bienestar de Guerrero, 2021–2023.",
+      "Oficial Mayor Recaudadora del Gobierno del Estado de Guerrero, 2025–2026.",
+      "Directora General del Sistema DIF Municipal de Taxco de Alarcón en 2026.",
+    ],
   },
   {
-    año: "La decisión",
-    titulo: "Dejar de tomar. Volver a vivir.",
-    desc: "Hace 10 meses tomó la decisión más valiente de su vida: soltar lo que la destruía. Día a día, sin aplausos, sin que nadie lo viera. Solo ella y su compromiso.",
+    titulo: "Empresaria y mentora de negocios",
+    items: [
+      "Fundadora de Tenorio & Asociados, Tacos Pato, Deliche, Lavandería 2M y Los Primos.",
+      "Creadora del Método Impulso, programa de mentoría empresarial para emprendedores.",
+    ],
+  },
+];
+
+const faqs = [
+  {
+    q: "¿Quién es Miriam Tenorio Velazco?",
+    a: "Es una empresaria, autora, mentora de negocios, conferencista y docente universitaria mexicana, con experiencia directiva en la administración pública estatal y municipal, participación política y gestión social.",
   },
   {
-    año: "La familia",
-    titulo: "Recuperar lo más sagrado",
-    desc: "El proceso de sanación no fue solo personal. Fue también relacional. Reconstruir puentes con quienes más amaba fue uno de los frutos más hermosos de su transformación.",
+    q: "¿Cuál es su preparación académica?",
+    a: "Es licenciada en Comunicación y Relaciones Públicas, maestra en Mercadotecnia y cuenta con estudios de Doctorado en Administración Pública.",
   },
   {
-    año: "El libro",
-    titulo: "Mujer Eres La Obra del Maestro",
-    desc: "Escribió lo que vivió. Sin filtros, sin postureo. Un libro para las mujeres que sienten que llegaron tarde, que se equivocaron demasiado, que ya no tienen derecho a soñar.",
+    q: "¿Qué es Método Impulso?",
+    a: "Es un programa de mentoría empresarial creado por Miriam Tenorio Velazco para ayudar a emprendedores a desarrollar negocios con claridad, estrategia comercial, herramientas tecnológicas y estructura financiera.",
   },
   {
-    año: "Hoy",
-    titulo: "Inspirar desde la autenticidad",
-    desc: "Hoy Miriam comparte su historia, su metodología y su fe con mujeres que necesitan saber que sí se puede. Que no importa desde dónde empiezas, sino que empieces.",
+    q: "¿Qué libro ha escrito?",
+    a: "Es autora de Mujer, eres la obra del Maestro. Naciste para algo más grande, publicado en 2025, una obra sobre fe, resiliencia, transformación personal y liderazgo femenino.",
+  },
+  {
+    q: "¿En qué temas imparte conferencias y mentorías?",
+    a: "Liderazgo femenino y desarrollo humano, emprendimiento y estrategia de negocios, mercadotecnia y comunicación estratégica, resiliencia y transformación personal, fe, identidad y propósito de vida, liderazgo consciente y gestión pública.",
   },
 ];
 
@@ -51,166 +72,184 @@ const personSchema = {
   "@type": "Person",
   name: "Miriam Tenorio Velazco",
   url: "https://miriamtenorio.com.mx",
-  description:
-    "Empresaria, autora de 'Mujer Eres La Obra del Maestro' y coach de negocios. Inspirando a mujeres a emprender y transformarse.",
-  jobTitle: "Coach de Negocios y Autora",
+  description: "Empresaria, autora, mentora de negocios, conferencista y docente universitaria mexicana.",
+  jobTitle: "Mentora de Negocios, Autora y Conferencista",
   nationality: { "@type": "Country", name: "México" },
 };
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "¿Quién es Miriam Tenorio Velazco?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Miriam Tenorio Velazco es una empresaria, autora y coach de negocios mexicana. Es autora del libro 'Mujer Eres La Obra del Maestro' e inspira a mujeres a emprender y transformarse.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cuál es la historia de Miriam Tenorio?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Miriam tocó fondo y decidió reconstruir su vida desde cero. Dejó de tomar hace más de 10 meses, recuperó a su familia y escribió su primer libro. Hoy inspira a otras mujeres con su historia real.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿En qué temas da conferencias Miriam Tenorio?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Miriam habla sobre transformación personal, emprendimiento femenino, resiliencia, fe y propósito, liderazgo desde la autenticidad y cómo volver a empezar.",
-      },
-    },
-  ],
+  mainEntity: faqs.map(f => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
+
+const sectionTitle = (text: string) => (
+  <h2 style={{
+    fontFamily: "'Playfair Display', serif",
+    fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
+    fontWeight: 700,
+    color: "#f5f0ff",
+    marginBottom: "20px",
+    marginTop: "48px",
+    paddingBottom: "12px",
+    borderBottom: "1px solid rgba(167,139,250,0.2)",
+  }}>{text}</h2>
+);
 
 export default function SobreMiPage() {
   return (
     <div style={{ paddingTop: "72px" }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
-      <section
-        style={{
-          padding: "100px 24px 80px",
-          textAlign: "center",
-          background: "radial-gradient(ellipse 70% 50% at 50% 30%, rgba(124,58,237,0.15) 0%, transparent 70%)",
-        }}
-      >
+      <section style={{
+        padding: "100px 24px 60px",
+        textAlign: "center",
+        background: "radial-gradient(ellipse 70% 50% at 50% 30%, rgba(124,58,237,0.15) 0%, transparent 70%)",
+      }}>
         <div style={{ maxWidth: "760px", margin: "0 auto" }}>
           <div style={{ color: "#a78bfa", fontSize: "0.85rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "16px" }}>
             Mi Historia
           </div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#f5f0ff", lineHeight: 1.15, marginBottom: "24px" }}>
-            Sobre Miriam Tenorio{" "}
+            Miriam Tenorio{" "}
             <span style={{ background: "linear-gradient(135deg, #a78bfa, #c4b5fd)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               Velazco
             </span>
           </h1>
-          <p style={{ color: "rgba(245,240,255,0.7)", fontSize: "1.1rem", lineHeight: 1.8 }}>
-            Empresaria, autora y mujer en proceso de transformación. Esta es mi historia sin filtros, sin postureo, tal como fue.
+          <p style={{ color: "rgba(245,240,255,0.75)", fontSize: "1.05rem", lineHeight: 1.8 }}>
+            Mujer de fe. Empresaria. Autora. Mentora de negocios. Docente universitaria. Servidora pública por vocación.
           </p>
         </div>
       </section>
 
-      {/* Bio principal */}
-      <section style={{ padding: "60px 24px" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <div
-            className="card-purple"
-            style={{
-              padding: "48px",
-              borderRadius: "24px",
-              marginBottom: "60px",
-            }}
-          >
-            <p style={{ color: "rgba(245,240,255,0.85)", fontSize: "1.1rem", lineHeight: 1.9, marginBottom: "20px" }}>
-              Soy Miriam Tenorio Velazco. Empresaria, autora y mujer en proceso de transformación.
-            </p>
-            <p style={{ color: "rgba(245,240,255,0.75)", fontSize: "1rem", lineHeight: 1.9, marginBottom: "20px" }}>
-              Después de tocar fondo, decidí reconstruir mi vida desde la fe, la disciplina y la verdad. No fue fácil. No fue rápido. Pero fue real.
-            </p>
-            <p style={{ color: "rgba(245,240,255,0.75)", fontSize: "1rem", lineHeight: 1.9, marginBottom: "20px" }}>
-              Hoy, más de 10 meses después de tomar la decisión más valiente de mi vida, puedo decir que el avance puede no ser visible para todos, pero es completamente real para mí.
-            </p>
-            <p style={{ color: "rgba(245,240,255,0.75)", fontSize: "1rem", lineHeight: 1.9 }}>
-              Escribí mi primer libro, recuperé a mi familia y encontré mi propósito: inspirar a otras mujeres a que vuelvan a empezar, sin importar desde dónde estén empezando.
+      {/* Contenido principal */}
+      <section style={{ padding: "40px 24px 80px" }}>
+        <div style={{ maxWidth: "820px", margin: "0 auto" }}>
+
+          {/* Párrafos intro */}
+          <div className="card-purple" style={{ padding: "40px 48px", borderRadius: "16px", marginBottom: "8px" }}>
+            <p style={{ color: "rgba(245,240,255,0.9)", fontSize: "1.1rem", lineHeight: 1.9, marginBottom: "20px", fontStyle: "italic" }}>
+              "Mi mayor conquista no ha sido ocupar un cargo, construir una empresa o alcanzar un grado académico. Ha sido aprender a gobernarme a mí misma."
             </p>
           </div>
 
-          {/* Timeline */}
-          <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "#f5f0ff", marginBottom: "48px", textAlign: "center" }}>
-            Mi camino
-          </h2>
+          {[
+            "Soy Miriam Tenorio Velazco, una mujer guerrerense que ha aprendido que el verdadero éxito no consiste únicamente en alcanzar grandes metas, sino en convertirnos en personas capaces de sostenerlas con integridad, propósito y conciencia.",
+            "He conocido el éxito y el fracaso, la abundancia y la adversidad, el reconocimiento y la incertidumbre. He dirigido instituciones, construido empresas, formado profesionales y recorrido comunidades. Pero también he tenido que detenerme, reconocer mis errores y reconstruirme desde lo más profundo de mi ser.",
+            "No soy una mujer perfecta. Soy una mujer que decidió dejar de huir de sí misma. Y esa decisión cambió mi vida.",
+          ].map((p, i) => (
+            <p key={i} style={{ color: "rgba(245,240,255,0.78)", fontSize: "1rem", lineHeight: 1.9, marginTop: "20px" }}>
+              {p}
+            </p>
+          ))}
 
-          <div style={{ position: "relative" }}>
-            <div
-              style={{
-                position: "absolute",
-                left: "20px",
-                top: 0,
-                bottom: 0,
-                width: "2px",
-                background: "linear-gradient(180deg, #7c3aed, transparent)",
-              }}
-            />
-            {timeline.map((item, i) => (
-              <div key={i} style={{ paddingLeft: "56px", paddingBottom: "40px", position: "relative" }}>
-                <div
-                  style={{
-                    position: "absolute",
-                    left: "12px",
-                    top: "4px",
-                    width: "18px",
-                    height: "18px",
-                    background: "#7c3aed",
-                    borderRadius: "50%",
-                    border: "3px solid #0a0a0f",
-                    boxShadow: "0 0 10px rgba(124,58,237,0.5)",
-                  }}
-                />
-                <div style={{ color: "#a78bfa", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "6px" }}>
-                  {item.año}
-                </div>
-                <h3 style={{ color: "#f5f0ff", fontWeight: 700, fontSize: "1.1rem", marginBottom: "10px" }}>
-                  {item.titulo}
-                </h3>
-                <p style={{ color: "rgba(245,240,255,0.65)", lineHeight: 1.8, fontSize: "0.95rem" }}>
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          {/* Trayectoria */}
+          {sectionTitle("Una trayectoria construida con propósito")}
+
+          {trayectoria.map((bloque, i) => (
+            <div key={i} style={{ marginBottom: "32px" }}>
+              <h3 style={{ color: "#c4b5fd", fontSize: "1rem", fontWeight: 700, letterSpacing: "0.05em", marginBottom: "14px" }}>
+                {bloque.titulo}
+              </h3>
+              <ul style={{ paddingLeft: "0", listStyle: "none", margin: 0 }}>
+                {bloque.items.map((item, j) => (
+                  <li key={j} style={{
+                    color: "rgba(245,240,255,0.72)",
+                    fontSize: "0.97rem",
+                    lineHeight: 1.8,
+                    paddingLeft: "20px",
+                    position: "relative",
+                    marginBottom: "8px",
+                  }}>
+                    <span style={{ position: "absolute", left: 0, color: "#a78bfa" }}>·</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          <p style={{ color: "rgba(245,240,255,0.65)", fontSize: "0.97rem", lineHeight: 1.9, marginTop: "8px", fontStyle: "italic" }}>
+            Estas experiencias me enseñaron que detrás de cada expediente, cada estadística y cada decisión gubernamental existe una historia humana. Porque servir no es un privilegio para engrandecernos, sino una responsabilidad para dignificar la vida de los demás.
+          </p>
+
+          {/* Transformación */}
+          {sectionTitle("La transformación más importante de mi vida")}
+
+          {[
+            "Durante mucho tiempo creí que podía resolverlo todo. Construía proyectos, perseguía metas y asumía responsabilidades, mientras descuidaba a la persona que sostenía cada una de ellas: yo misma.",
+            "Hasta que un día toqué fondo. Y en el fondo me estaba esperando Dios.",
+            "Decidí dejar el alcohol, enfrentar mis heridas, asumir la responsabilidad de mis decisiones y reconstruir mi vida desde la fe, la disciplina y la verdad.",
+            "Aprendí que reconocer nuestras equivocaciones no nos hace menos valientes. Que pedir ayuda no nos hace débiles. Y que volver a empezar no significa haber fracasado.",
+            "Recuperé lo más sagrado: mi familia, mi paz y mi relación con Dios.",
+            "Comprendí que ningún cargo, reconocimiento, cantidad de dinero o posición de poder vale la pena si para conseguirlo tenemos que perdernos a nosotros mismos.",
+          ].map((p, i) => (
+            <p key={i} style={{ color: "rgba(245,240,255,0.78)", fontSize: "1rem", lineHeight: 1.9, marginBottom: "16px" }}>
+              {p}
+            </p>
+          ))}
+
+          {/* Libro */}
+          {sectionTitle("De mis heridas nació un libro")}
+
+          <p style={{ color: "rgba(245,240,255,0.78)", fontSize: "1rem", lineHeight: 1.9, marginBottom: "16px" }}>
+            De ese proceso de transformación nació mi primer libro: <strong style={{ color: "#c4b5fd" }}>Mujer, eres la obra del Maestro. Naciste para algo más grande.</strong> Una obra escrita desde la experiencia, la vulnerabilidad, la fe y la esperanza.
+          </p>
+          <p style={{ color: "rgba(245,240,255,0.78)", fontSize: "1rem", lineHeight: 1.9, marginBottom: "16px" }}>
+            No la escribí porque tuviera todas las respuestas. La escribí porque sé lo que significa necesitar una segunda oportunidad y descubrir que nuestra historia todavía puede tener un nuevo capítulo.
+          </p>
+          <p style={{ color: "rgba(245,240,255,0.78)", fontSize: "1rem", lineHeight: 1.9 }}>
+            Es mi manera de recordarle a otras mujeres que su pasado no determina su destino y que ninguna equivocación tiene por qué convertirse en una sentencia de vida.
+          </p>
+
+          {/* Propósito */}
+          {sectionTitle("Mi propósito")}
+
+          <p style={{ color: "rgba(245,240,255,0.78)", fontSize: "1rem", lineHeight: 1.9, marginBottom: "16px" }}>
+            Hoy integro mi experiencia empresarial, académica, gubernamental y personal para formar, acompañar e inspirar a quienes desean transformar su vida y su entorno. A través de mis conferencias, mentorías, libros y proyectos, promuevo el emprendimiento, el liderazgo consciente, la autonomía económica, la resiliencia y el desarrollo humano.
+          </p>
+          <p style={{ color: "rgba(245,240,255,0.78)", fontSize: "1rem", lineHeight: 1.9 }}>
+            Creo en las mujeres que se atreven a levantar la voz, que construyen sus propias oportunidades y que comprenden que no necesitan apagar la luz de nadie para hacer brillar la suya.
+          </p>
+
+          {/* Principios */}
+          {sectionTitle("Mis principios")}
+
+          <div className="card-purple" style={{ padding: "36px 40px", borderRadius: "16px", textAlign: "center" }}>
+            <p style={{ color: "#c4b5fd", fontSize: "1.2rem", fontWeight: 700, fontFamily: "'Playfair Display', serif", marginBottom: "16px" }}>
+              Dios, la verdad y mi paz.
+            </p>
+            <p style={{ color: "rgba(245,240,255,0.72)", fontSize: "0.97rem", lineHeight: 1.9, marginBottom: "16px" }}>
+              Son los pilares desde los que he decidido construir esta nueva etapa de mi vida. Ya no mido mi éxito solamente por lo que consigo, sino por la mujer en la que me convierto mientras lo consigo.
+            </p>
+            <p style={{ color: "rgba(245,240,255,0.72)", fontSize: "0.97rem", lineHeight: 1.9, marginBottom: "20px" }}>
+              Mi pasado forma parte de mi historia, pero no define mi destino. Y si algo he aprendido en este camino es que no importa lo que pierda, con que no me pierda yo nuevamente.
+            </p>
+            <p style={{ color: "#a78bfa", fontSize: "1rem", fontWeight: 700, fontStyle: "italic" }}>
+              Primero el SER y después el HACER. — Miriam Tenorio Velazco
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* FAQ Section */}
-      <section style={{ padding: "60px 24px 100px" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "1.8rem", fontWeight: 700, color: "#f5f0ff", marginBottom: "40px", textAlign: "center" }}>
-            Preguntas frecuentes
-          </h2>
-          {faqSchema.mainEntity.map((item, i) => (
-            <div key={i} className="card-purple" style={{ padding: "28px", marginBottom: "16px" }}>
+          {/* FAQ */}
+          {sectionTitle("Preguntas frecuentes")}
+
+          {faqs.map((f, i) => (
+            <div key={i} className="card-purple" style={{ padding: "24px 28px", marginBottom: "12px", borderRadius: "10px" }}>
               <h3 style={{ color: "#c4b5fd", fontWeight: 600, marginBottom: "10px", fontSize: "1rem" }}>
-                {item.name}
+                {f.q}
               </h3>
               <p style={{ color: "rgba(245,240,255,0.7)", lineHeight: 1.7, fontSize: "0.95rem" }}>
-                {item.acceptedAnswer.text}
+                {f.a}
               </p>
             </div>
           ))}
+
         </div>
       </section>
 
