@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     "UAGro docente",
     "Mujer eres la obra del Maestro",
   ],
-  authors: [{ name: "Miriam Tenorio Velazco", url: "https://miriamtenorio.com" }],
+  authors: [{ name: "Miriam Tenorio Velazco", url: "https://miriamtenorio.com.mx" }],
   creator: "Miriam Tenorio Velazco",
-  metadataBase: new URL("https://miriamtenorio.com"),
-  alternates: { canonical: "https://miriamtenorio.com" },
+  metadataBase: new URL("https://miriamtenorio.com.mx"),
+  alternates: { canonical: "https://miriamtenorio.com.mx" },
   openGraph: {
     type: "website",
     locale: "es_MX",
-    url: "https://miriamtenorio.com",
+    url: "https://miriamtenorio.com.mx",
     siteName: "Miriam Tenorio Velazco",
     title: "Miriam Tenorio Velazco | Doctoranda, Autora, Mentora y Conferencista",
     description: "Doctoranda en Administración Pública, autora y conferencista. Liderazgo femenino con base académica, experiencia institucional y fe.",
@@ -50,8 +50,8 @@ const personSchema = {
   "@type": "Person",
   name: "Miriam Tenorio Velazco",
   alternateName: "Dra. Miriam Tenorio",
-  url: "https://miriamtenorio.com",
-  image: "https://miriamtenorio.com/miriam-tenorio.jpg",
+  url: "https://miriamtenorio.com.mx",
+  image: "https://miriamtenorio.com.mx/miriam-tenorio.jpg",
   description: "Doctoranda en Administración Pública, autora de 'Mujer, eres la obra del Maestro' y conferencista mexicana. Creadora del método METAMORFOSIS de liderazgo personal.",
   jobTitle: "Doctoranda, Autora, Mentora y Conferencista",
   nationality: { "@type": "Country", name: "México" },
@@ -70,7 +70,7 @@ const personSchema = {
     "https://youtube.com/@miritenorio",
     "https://www.facebook.com/MiriamTenorioVelazco",
   ],
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://miriamtenorio.com" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://miriamtenorio.com.mx" },
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

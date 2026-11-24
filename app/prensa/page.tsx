@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
 
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Cobertura de prensa y apariciones mediáticas de Miriam Tenorio Velazco. Para solicitar entrevistas o material de prensa, contáctanos.",
   openGraph: {
     title: "Prensa — Miriam Tenorio Velazco",
-    url: "https://miriamtenorio.com/prensa",
+    url: "https://miriamtenorio.com.mx/prensa",
   },
 };
 

@@ -1,8 +1,8 @@
-import { MetadataRoute } from "next";
+﻿import { MetadataRoute } from "next";
 import { articulos } from "./blog/page";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://miriamtenorio.com";
+  const base = "https://miriamtenorio.com.mx";
 
   const pages = [
     { url: base, priority: 1.0, changeFrequency: "weekly" as const },

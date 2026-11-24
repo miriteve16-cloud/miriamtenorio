@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -551,7 +551,7 @@ export default function MasterclassPage() {
       }}>
         <Link href="/" style={{ textDecoration: "none" }}>
           <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "0.9rem", color: "rgba(212,168,67,0.5)" }}>
-            miriamtenorio.com
+            miriamtenorio.com.mx
           </span>
         </Link>
         <p style={{ color: "rgba(255,255,255,0.2)", fontSize: "0.72rem", marginTop: "8px" }}>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpen, Star, ArrowRight } from "lucide-react";
 
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mujer Eres La Obra del Maestro — El libro de Miriam Tenorio",
     description: "Un libro escrito desde las entrañas de la experiencia real. No es teoría — es la historia de una mujer que decidió levantarse.",
-    url: "https://miriamtenorio.com/libro",
+    url: "https://miriamtenorio.com.mx/libro",
   },
 };
 
@@ -21,11 +21,11 @@ const bookSchema = {
   author: {
     "@type": "Person",
     name: "Miriam Tenorio Velazco",
-    url: "https://miriamtenorio.com",
+    url: "https://miriamtenorio.com.mx",
   },
   inLanguage: "es",
   genre: ["Autoayuda", "Desarrollo Personal", "Espiritualidad"],
-  url: "https://miriamtenorio.com/libro",
+  url: "https://miriamtenorio.com.mx/libro",
   publisher: {
     "@type": "Organization",
     name: "Miriam Tenorio Velazco",
@@ -57,7 +57,7 @@ const faqSchema = {
       name: "¿Cómo puedo conseguir el libro de Miriam Tenorio?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Puedes contactar a Miriam directamente a través del formulario de contacto en miriamtenorio.com/contacto o por correo a miriteve16@gmail.com.",
+        text: "Puedes contactar a Miriam directamente a través del formulario de contacto en miriamtenorio.com.mx/contacto o por correo a miriteve16@gmail.com.",
       },
     },
   ],

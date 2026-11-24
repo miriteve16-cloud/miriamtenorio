@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sobre Mí | Miriam Tenorio Velazco",
     description: "La historia real de una mujer que tocó fondo y decidió reconstruir todo.",
-    url: "https://miriamtenorio.com/sobre-mi",
+    url: "https://miriamtenorio.com.mx/sobre-mi",
   },
 };
 
@@ -50,7 +50,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Miriam Tenorio Velazco",
-  url: "https://miriamtenorio.com",
+  url: "https://miriamtenorio.com.mx",
   description:
     "Empresaria, autora de 'Mujer Eres La Obra del Maestro' y coach de negocios. Inspirando a mujeres a emprender y transformarse.",
   jobTitle: "Coach de Negocios y Autora",

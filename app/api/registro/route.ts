@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+﻿import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   try {
@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
               </div>
             </div>
             <div class="footer">
-              Registro recibido el ${fecha} · miriamtenorio.com/registro
+              Registro recibido el ${fecha} · miriamtenorio.com.mx/registro
             </div>
           </div>
         </body>
@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "Miriam Tenorio Web <noreply@miriamtenorio.com>",
+          from: "Miriam Tenorio Web <noreply@miriamtenorio.com.mx>",
           to: ["miriteve16@gmail.com"],
           subject: `🎟 Nueva inscripción METAMORFOSIS — ${nombre} (${folio})`,
           html: htmlEmail,

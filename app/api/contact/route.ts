@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+﻿import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   try {
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
         <div class="container">
           <div class="header">
             <h1>💜 Nuevo mensaje recibido</h1>
-            <p>miriamtenorio.com</p>
+            <p>miriamtenorio.com.mx</p>
           </div>
           <div class="body">
             <div class="field">
@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
             </div>
           </div>
           <div class="footer">
-            Mensaje enviado desde miriamtenorio.com · ${new Date().toLocaleDateString("es-MX", { day: "2-digit", month: "long", year: "numeric" })}
+            Mensaje enviado desde miriamtenorio.com.mx · ${new Date().toLocaleDateString("es-MX", { day: "2-digit", month: "long", year: "numeric" })}
           </div>
         </div>
       </body>
@@ -76,7 +76,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Miriam Tenorio Web <noreply@miriamtenorio.com>",
+        from: "Miriam Tenorio Web <noreply@miriamtenorio.com.mx>",
         to: ["miriteve16@gmail.com"],
         subject: `[Nuevo lead] ${tipo} — ${nombre}`,
         html: htmlEmail,

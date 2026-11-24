@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Mic, ArrowRight, Users, Heart, TrendingUp, Star } from "lucide-react";
 
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Conferencias de Miriam Tenorio Velazco",
     description: "Experiencias auténticas y poderosas para eventos corporativos, retiros y congresos de mujeres.",
-    url: "https://miriamtenorio.com/conferencias",
+    url: "https://miriamtenorio.com.mx/conferencias",
   },
 };
 
@@ -38,7 +38,7 @@ const faqSchema = {
       name: "¿Cómo contratar a Miriam Tenorio para una conferencia?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Puedes contactarla a través del formulario en miriamtenorio.com/contacto o por correo a miriteve16@gmail.com.",
+        text: "Puedes contactarla a través del formulario en miriamtenorio.com.mx/contacto o por correo a miriteve16@gmail.com.",
       },
     },
   ],

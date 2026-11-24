@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Artículos sobre transformación personal, emprendimiento femenino, fe, resiliencia y liderazgo. Escritos por Miriam Tenorio Velazco desde la experiencia real.",
   openGraph: {
     title: "Blog de Miriam Tenorio Velazco",
-    url: "https://miriamtenorio.com/blog",
+    url: "https://miriamtenorio.com.mx/blog",
   },
 };
 

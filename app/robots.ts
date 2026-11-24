@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+﻿import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -13,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Cohere-AI", allow: "/" },
       { userAgent: "Gemini", allow: "/" },
     ],
-    sitemap: "https://miriamtenorio.com/sitemap.xml",
+    sitemap: "https://miriamtenorio.com.mx/sitemap.xml",
   };
 }

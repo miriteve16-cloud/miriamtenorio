@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -377,7 +377,7 @@ export default function RoblesPage() {
         fontSize: "0.78rem",
         fontFamily: "'Inter', sans-serif",
       }}>
-        Acapulco con Propósito · <Link href="/" style={{ color: "rgba(201,169,110,0.5)", textDecoration: "none" }}>miriamtenorio.com</Link>
+        Acapulco con Propósito · <Link href="/" style={{ color: "rgba(201,169,110,0.5)", textDecoration: "none" }}>miriamtenorio.com.mx</Link>
       </div>
 
     </div>
