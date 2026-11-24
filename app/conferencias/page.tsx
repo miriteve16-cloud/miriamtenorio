@@ -1,14 +1,14 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { Mic, ArrowRight, Users, Heart, TrendingUp, Star } from "lucide-react";
+import { ArrowRight, Mic } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Conferencias y Keynotes | Miriam Tenorio Velazco",
+  title: "Conferencias, Talleres y Mentorías | Miriam Tenorio Velazco",
   description:
-    "Contrata a Miriam Tenorio Velazco para tu evento. Temas: transformación personal, emprendimiento femenino, liderazgo auténtico y resiliencia. Conferencista mexicana.",
+    "Empresaria, autora, conferencista y docente universitaria con experiencia directiva en administración pública estatal y municipal. Conocimiento que transforma. Liderazgo que trasciende.",
   openGraph: {
     title: "Conferencias de Miriam Tenorio Velazco",
-    description: "Experiencias auténticas y poderosas para eventos corporativos, retiros y congresos de mujeres.",
+    description: "Conocimiento académico, experiencia gubernamental y empresarial, y transformación humana para tu evento.",
     url: "https://miriamtenorio.com.mx/conferencias",
   },
 };
@@ -22,7 +22,7 @@ const faqSchema = {
       name: "¿En qué eventos puede dar conferencias Miriam Tenorio?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Miriam da conferencias en eventos corporativos, congresos de mujeres, retiros espirituales, convenciones de ventas, eventos de emprendimiento y graduaciones.",
+        text: "Miriam da conferencias en foros de gobierno, eventos corporativos, congresos universitarios, congresos de mujeres, retiros de liderazgo, convenciones empresariales y eventos de administración pública.",
       },
     },
     {
@@ -30,7 +30,23 @@ const faqSchema = {
       name: "¿Cuáles son los temas de conferencia de Miriam Tenorio Velazco?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sus temas incluyen: transformación personal desde el fondo, emprendimiento femenino, resiliencia y fe, liderazgo auténtico, cómo volver a empezar, el poder de las decisiones difíciles, políticas públicas, desarrollo social, desarrollo económico y gestión pública.",
+        text: "Sus temas incluyen: administración pública y gobernanza, ética y responsabilidad social, emprendimiento e innovación social, estrategia y desarrollo empresarial, liderazgo y desarrollo organizacional, mercadotecnia y comunicación, liderazgo femenino, y transformación personal y propósito.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuál es la preparación académica de Miriam Tenorio?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Es licenciada en Comunicación y Relaciones Públicas, maestra en Mercadotecnia y cuenta con estudios de Doctorado en Administración Pública. Ha sido docente universitaria en licenciatura y posgrado.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué experiencia gubernamental tiene Miriam Tenorio?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Tiene trayectoria directiva en administración pública estatal y municipal: Directora General de Acciones Prioritarias en Secretaría de Bienestar de Guerrero, Oficial Mayor Recaudadora del Gobierno del Estado, Directora General del DIF Municipal de Taxco, y Asesora en Desarrollo Económico del Ayuntamiento de Acapulco.",
       },
     },
     {
@@ -44,46 +60,132 @@ const faqSchema = {
   ],
 };
 
-const temas = [
+const areas = [
   {
-    icon: <Heart size={32} color="#a78bfa" />,
-    titulo: "Mujer, Eres La Obra del Maestro",
-    subtitulo: "Keynote principal",
-    desc: "La conferencia basada en su libro. Una experiencia íntima y poderosa donde Miriam comparte su historia de transformación. Mueve audiencias porque habla desde lo vivido, no desde lo aprendido.",
-    duracion: "45-60 min",
-    para: "Congresos de mujeres, eventos corporativos, retiros",
+    num: "01",
+    titulo: "Administración pública y gobernanza",
+    desc: "Políticas públicas, gestión gubernamental, valor público, transparencia y profesionalización institucional.",
   },
   {
-    icon: <TrendingUp size={32} color="#a78bfa" />,
-    titulo: "Emprender Desde Cero: Lo que Nadie Te Cuenta",
-    subtitulo: "Emprendimiento",
-    desc: "El camino real del emprendimiento femenino. Sin poses, sin Instagram, solo las verdades que marcan la diferencia entre rendirse y seguir. Práctica, honesta y accionable.",
+    num: "02",
+    titulo: "Ética y responsabilidad social",
+    desc: "Integridad, sostenibilidad, responsabilidad empresarial e institucional, y desarrollo sostenible.",
+  },
+  {
+    num: "03",
+    titulo: "Emprendimiento e innovación social",
+    desc: "Proyectos comunitarios, diseño de soluciones, pruebas piloto y evaluación del impacto social.",
+  },
+  {
+    num: "04",
+    titulo: "Estrategia y desarrollo empresarial",
+    desc: "Método Impulso, modelos de negocio, ventas, rentabilidad e inteligencia artificial aplicada.",
+  },
+  {
+    num: "05",
+    titulo: "Liderazgo y desarrollo organizacional",
+    desc: "Pensamiento estratégico, dirección de equipos, toma de decisiones y cultura organizacional.",
+  },
+  {
+    num: "06",
+    titulo: "Mercadotecnia y comunicación",
+    desc: "Identidad institucional, posicionamiento, marca personal y comunicación estratégica.",
+  },
+  {
+    num: "07",
+    titulo: "Liderazgo femenino",
+    desc: "Autonomía económica, participación social y mujeres en espacios de decisión.",
+  },
+  {
+    num: "08",
+    titulo: "Transformación personal y propósito",
+    desc: "Resiliencia, identidad, fe, congruencia y liderazgo desde el SER.",
+  },
+];
+
+const insignia = [
+  {
+    num: "01",
+    titulo: "Gobernar es servir, no servirse",
+    area: "Administración pública y liderazgo institucional",
+    desc: "El ejercicio del poder, la ética gubernamental, la responsabilidad institucional y la generación de valor público.",
+    para: "Foros de gobierno, universidades, congresos de administración pública",
     duracion: "45-90 min",
-    para: "Eventos de negocios, universidades, cámaras empresariales",
   },
   {
-    icon: <Star size={32} color="#a78bfa" />,
-    titulo: "Volver a Empezar: El Poder de las Segundas Oportunidades",
-    subtitulo: "Resiliencia",
-    desc: "Cuando todo se cae, ¿qué queda? Esta conferencia habla del proceso real de reconstrucción personal, familiar y profesional. Para quienes lideran equipos en crisis o personas en transición.",
-    duracion: "30-60 min",
-    para: "Corporativos, hospitales, iglesias, organizaciones sin fines de lucro",
-  },
-  {
-    icon: <Users size={32} color="#a78bfa" />,
-    titulo: "Liderazgo Desde la Autenticidad",
-    subtitulo: "Liderazgo",
-    desc: "Los mejores líderes no lideran desde la perfección, sino desde la verdad. Cómo construir equipos, familias y organizaciones basadas en la confianza y la vulnerabilidad estratégica.",
+    num: "02",
+    titulo: "El precio de nuestras decisiones",
+    area: "Ética y responsabilidad social",
+    desc: "Las consecuencias humanas, económicas, institucionales y sociales de las decisiones que tomamos.",
+    para: "Corporativos, gobierno, instituciones educativas",
     duracion: "45-60 min",
-    para: "Eventos ejecutivos, líderes de equipos, directivos",
   },
   {
-    icon: <Mic size={32} color="#a78bfa" />,
-    titulo: "Políticas Públicas y Desarrollo Social",
-    subtitulo: "Gestión pública",
-    desc: "Desde la experiencia directiva en gobierno estatal y municipal, Miriam comparte una visión práctica sobre gestión pública, desarrollo económico, políticas sociales y el papel del liderazgo institucional en la transformación comunitaria.",
-    duracion: "45-90 min",
-    para: "Foros de gobierno, universidades, congresos de administración pública, cámaras empresariales",
+    num: "03",
+    titulo: "De una necesidad social a una política pública",
+    area: "Emprendimiento e innovación social",
+    desc: "El diseño de soluciones comunitarias, su validación mediante pruebas piloto y sus posibilidades de crecimiento e institucionalización.",
+    para: "Foros de gobierno, universidades, organizaciones civiles",
+    duracion: "60-90 min",
+  },
+  {
+    num: "04",
+    titulo: "Método Impulso: de la idea a la rentabilidad",
+    area: "Estrategia empresarial",
+    desc: "Herramientas para construir negocios con claridad, estrategia comercial, estructura financiera y propósito.",
+    para: "Cámaras empresariales, universidades, eventos de emprendimiento",
+    duracion: "60-90 min",
+  },
+  {
+    num: "05",
+    titulo: "Mujeres que deciden, lideran y transforman",
+    area: "Liderazgo femenino",
+    desc: "Autonomía económica, identidad, preparación y participación de las mujeres en espacios de decisión.",
+    para: "Congresos de mujeres, eventos corporativos, gobierno",
+    duracion: "45-60 min",
+  },
+  {
+    num: "06",
+    titulo: "Primero el SER y después el HACER",
+    area: "Liderazgo y transformación humana",
+    desc: "Identidad, congruencia, responsabilidad, propósito y liderazgo consciente como base de toda transformación real.",
+    para: "Retiros, eventos ejecutivos, congresos de desarrollo humano",
+    duracion: "45-60 min",
+  },
+  {
+    num: "07",
+    titulo: "Mujer, eres la obra del Maestro",
+    area: "Keynote principal · basada en su libro",
+    desc: "Una experiencia íntima y poderosa donde Miriam comparte su historia de transformación. Mueve audiencias porque habla desde lo vivido, con fe, vulnerabilidad y esperanza.",
+    para: "Congresos de mujeres, retiros espirituales, eventos corporativos",
+    duracion: "45-60 min",
+  },
+];
+
+const diferenciadores = [
+  {
+    titulo: "Preparación académica",
+    desc: "Licenciada en Comunicación y Relaciones Públicas, maestra en Mercadotecnia y con estudios de Doctorado en Administración Pública.",
+  },
+  {
+    titulo: "Experiencia gubernamental",
+    desc: "Trayectoria directiva en administración pública estatal y municipal: desarrollo económico, bienestar social, administración fiscal, asistencia social y gestión territorial.",
+  },
+  {
+    titulo: "Experiencia empresarial",
+    desc: "Empresaria, mentora de negocios y creadora del Método Impulso. Comparte herramientas desde la experiencia de haber construido y dirigido negocios propios.",
+  },
+  {
+    titulo: "Vocación académica",
+    desc: "Docente universitaria en licenciatura y posgrado, especializada en pensamiento estratégico, toma de decisiones y emprendimiento.",
+  },
+  {
+    titulo: "Compromiso social",
+    desc: "Promueve el desarrollo comunitario, la responsabilidad social, el liderazgo femenino y la vinculación entre gobierno, empresa, academia y sociedad.",
+  },
+  {
+    titulo: "Contenidos personalizados",
+    desc: "Conferencias, talleres y programas de formación diseñados de acuerdo con las necesidades y objetivos de cada organización.",
   },
 ];
 
@@ -92,87 +194,124 @@ export default function ConferenciasPage() {
     <div style={{ paddingTop: "72px" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* Hero */}
-      <section
-        style={{
-          padding: "100px 24px 80px",
-          textAlign: "center",
-          background: "radial-gradient(ellipse 70% 50% at 50% 30%, rgba(124,58,237,0.15) 0%, transparent 70%)",
-        }}
-      >
-        <Mic size={48} color="#a78bfa" style={{ margin: "0 auto 24px" }} />
-        <div style={{ color: "#a78bfa", fontSize: "0.85rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "16px" }}>
-          Conferencias y Keynotes
+      {/* HERO */}
+      <section style={{
+        padding: "90px 24px 80px",
+        textAlign: "center",
+        background: "radial-gradient(ellipse 70% 50% at 50% 30%, rgba(124,58,237,0.15) 0%, transparent 70%)",
+      }}>
+        <div style={{ maxWidth: "760px", margin: "0 auto" }}>
+          <div style={{ color: "#a78bfa", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "20px" }}>
+            Conferencias · Talleres · Mentorías
+          </div>
+          <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.4rem)", fontWeight: 800, color: "#f5f0ff", lineHeight: 1.15, marginBottom: "20px" }}>
+            Conocimiento que transforma.{" "}
+            <span style={{ background: "linear-gradient(135deg, #a78bfa, #c4b5fd)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              Liderazgo que trasciende.
+            </span>
+          </h1>
+          <p style={{ color: "rgba(245,240,255,0.78)", fontSize: "1.05rem", lineHeight: 1.8, marginBottom: "16px" }}>
+            <strong style={{ color: "#f5f0ff" }}>Miriam Tenorio Velazco</strong> — Empresaria, autora, conferencista, mentora de negocios y docente universitaria con experiencia directiva en la administración pública estatal y municipal.
+          </p>
+          <p style={{ color: "rgba(245,240,255,0.65)", fontSize: "1rem", lineHeight: 1.8, marginBottom: "36px" }}>
+            Integra conocimiento académico, experiencia profesional y transformación humana para fortalecer personas, organizaciones e instituciones.
+          </p>
+          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/contacto" className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+              Solicitar conferencia <ArrowRight size={16} />
+            </Link>
+          </div>
+          <p style={{ color: "#c4b5fd", fontSize: "1rem", fontWeight: 700, fontStyle: "italic", marginTop: "32px" }}>
+            "Primero el SER y después el HACER."
+          </p>
         </div>
-        <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#f5f0ff", lineHeight: 1.15, marginBottom: "24px" }}>
-          Una historia que{" "}
-          <span style={{ background: "linear-gradient(135deg, #a78bfa, #c4b5fd)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-            mueve audiencias
-          </span>
-        </h1>
-        <p style={{ color: "rgba(245,240,255,0.7)", fontSize: "1.1rem", lineHeight: 1.8, maxWidth: "650px", margin: "0 auto 40px" }}>
-          Miriam no habla desde los libros que leyó. Habla desde lo que vivió. Y eso hace toda la diferencia en un escenario.
-        </p>
-        <Link href="/contacto" className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
-          Contratar para mi evento <ArrowRight size={16} />
-        </Link>
       </section>
 
-      {/* Temas */}
-      <section style={{ padding: "80px 24px" }}>
+      {/* ÁREAS DE ESPECIALIZACIÓN */}
+      <section style={{ padding: "80px 24px", background: "#0a0a0f" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#f5f0ff", marginBottom: "48px", textAlign: "center" }}>
-            Temas disponibles
-          </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "28px" }}>
-            {temas.map((tema, i) => (
-              <div key={i} className="card-purple" style={{ padding: "36px 28px" }}>
-                <div style={{ marginBottom: "16px" }}>{tema.icon}</div>
-                <div style={{ color: "#a78bfa", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "8px" }}>
-                  {tema.subtitulo}
-                </div>
-                <h3 style={{ color: "#f5f0ff", fontWeight: 700, fontSize: "1.1rem", marginBottom: "14px", lineHeight: 1.3 }}>
-                  {tema.titulo}
-                </h3>
-                <p style={{ color: "rgba(245,240,255,0.65)", lineHeight: 1.7, fontSize: "0.9rem", marginBottom: "20px" }}>
-                  {tema.desc}
-                </p>
-                <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-                  <span style={{ background: "rgba(124,58,237,0.2)", color: "#c4b5fd", padding: "4px 12px", borderRadius: "20px", fontSize: "0.75rem" }}>
-                    ⏱ {tema.duracion}
-                  </span>
-                </div>
-                <p style={{ color: "rgba(245,240,255,0.4)", fontSize: "0.8rem", marginTop: "12px" }}>
-                  {tema.para}
-                </p>
+          <div style={{ textAlign: "center", marginBottom: "52px" }}>
+            <div style={{ color: "#a78bfa", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "12px" }}>
+              Áreas de especialización
+            </div>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", color: "#f5f0ff", marginBottom: "12px" }}>
+              Conocimiento y experiencia para cada desafío
+            </h2>
+            <p style={{ color: "rgba(245,240,255,0.55)", fontSize: "0.95rem", maxWidth: "560px", margin: "0 auto" }}>
+              Ocho áreas que permiten a presidentes municipales, rectores, empresarios y organizadores de eventos encontrar contenidos alineados con sus necesidades.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "16px" }}>
+            {areas.map((a, i) => (
+              <div key={i} className="card-purple" style={{ padding: "24px", borderRadius: "10px", position: "relative", overflow: "hidden" }}>
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, #7c3aed, transparent)" }} />
+                <div style={{ color: "rgba(167,139,250,0.4)", fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", marginBottom: "8px" }}>{a.num}</div>
+                <h3 style={{ color: "#f5f0ff", fontSize: "0.97rem", fontWeight: 700, marginBottom: "8px", lineHeight: 1.4 }}>{a.titulo}</h3>
+                <p style={{ color: "rgba(245,240,255,0.55)", fontSize: "0.85rem", lineHeight: 1.7 }}>{a.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Por qué Miriam */}
-      <section style={{ padding: "80px 24px", background: "rgba(124,58,237,0.03)", borderTop: "1px solid rgba(124,58,237,0.1)", borderBottom: "1px solid rgba(124,58,237,0.1)" }}>
-        <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
-          <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#f5f0ff", marginBottom: "16px" }}>
-            ¿Por qué Miriam en tu evento?
-          </h2>
-          <p style={{ color: "rgba(245,240,255,0.65)", marginBottom: "48px" }}>
-            En un mundo de expertos que hablan de lo que leyeron, Miriam habla de lo que vivió.
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "24px" }}>
-            {[
-              { emoji: "🔥", titulo: "Autenticidad radical", desc: "Nada de guiones perfectos. Habla desde el corazón." },
-              { emoji: "💜", titulo: "Conexión real", desc: "Las audiencias lloran, ríen y se levantan. Juntas." },
-              { emoji: "📚", titulo: "Autora publicada", desc: "Respaldada por su libro y su historia verificable." },
-              { emoji: "🎯", titulo: "Contenido a medida", desc: "Cada conferencia se adapta a tu audiencia y objetivo." },
-            ].map((item, i) => (
-              <div key={i} style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "2.5rem", marginBottom: "12px" }}>{item.emoji}</div>
-                <h3 style={{ color: "#c4b5fd", fontWeight: 700, fontSize: "1rem", marginBottom: "8px" }}>{item.titulo}</h3>
-                <p style={{ color: "rgba(245,240,255,0.55)", fontSize: "0.9rem", lineHeight: 1.6 }}>{item.desc}</p>
+      {/* CONFERENCIAS INSIGNIA */}
+      <section style={{ padding: "80px 24px" }}>
+        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "52px" }}>
+            <div style={{ color: "#a78bfa", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "12px" }}>
+              Conferencias insignia
+            </div>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", color: "#f5f0ff" }}>
+              Propuestas principales
+            </h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "20px" }}>
+            {insignia.map((c, i) => (
+              <div key={i} className="card-purple" style={{ padding: "28px", borderRadius: "12px" }}>
+                <div style={{ color: "#a78bfa", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.15em", marginBottom: "6px" }}>{c.num}</div>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", color: "#f5f0ff", fontSize: "1.1rem", fontWeight: 700, marginBottom: "6px", lineHeight: 1.3 }}>
+                  {c.titulo}
+                </h3>
+                <div style={{ color: "#c4b5fd", fontSize: "0.78rem", fontWeight: 600, letterSpacing: "0.08em", marginBottom: "12px", textTransform: "uppercase" }}>
+                  {c.area}
+                </div>
+                <p style={{ color: "rgba(245,240,255,0.65)", fontSize: "0.9rem", lineHeight: 1.7, marginBottom: "16px" }}>{c.desc}</p>
+                <div style={{ borderTop: "1px solid rgba(124,58,237,0.2)", paddingTop: "12px", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "6px" }}>
+                  <span style={{ color: "rgba(245,240,255,0.4)", fontSize: "0.78rem" }}>⏱ {c.duracion}</span>
+                  <span style={{ color: "rgba(245,240,255,0.4)", fontSize: "0.78rem" }}>{c.para}</span>
+                </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* POR QUÉ CONTRATARME */}
+      <section style={{ padding: "80px 24px", background: "#0a0a0f" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "48px" }}>
+            <div style={{ color: "#a78bfa", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "12px" }}>
+              ¿Por qué contratarme?
+            </div>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", color: "#f5f0ff", marginBottom: "12px" }}>
+              Una trayectoria que integra conocimiento, experiencia, conciencia y propósito.
+            </h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "16px", marginBottom: "40px" }}>
+            {diferenciadores.map((d, i) => (
+              <div key={i} className="card-purple" style={{ padding: "24px", borderRadius: "10px" }}>
+                <h3 style={{ color: "#c4b5fd", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: "10px" }}>
+                  {d.titulo}
+                </h3>
+                <p style={{ color: "rgba(245,240,255,0.65)", fontSize: "0.9rem", lineHeight: 1.7 }}>{d.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="card-purple" style={{ padding: "32px 36px", borderRadius: "12px", textAlign: "center" }}>
+            <p style={{ color: "rgba(245,240,255,0.78)", fontSize: "1rem", lineHeight: 1.9, marginBottom: "16px", fontStyle: "italic" }}>
+              "No hablo del emprendimiento sin haber emprendido, del servicio público sin haber servido, del liderazgo sin haber dirigido ni de la transformación sin haberme transformado."
+            </p>
+            <p style={{ color: "#a78bfa", fontWeight: 700, fontSize: "0.9rem" }}>— Miriam Tenorio Velazco</p>
           </div>
         </div>
       </section>
@@ -180,11 +319,11 @@ export default function ConferenciasPage() {
       {/* FAQ */}
       <section style={{ padding: "80px 24px" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "1.8rem", fontWeight: 700, color: "#f5f0ff", marginBottom: "40px", textAlign: "center" }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.8rem", fontWeight: 700, color: "#f5f0ff", marginBottom: "40px", textAlign: "center" }}>
             Preguntas frecuentes
           </h2>
           {faqSchema.mainEntity.map((item, i) => (
-            <div key={i} className="card-purple" style={{ padding: "28px", marginBottom: "16px" }}>
+            <div key={i} className="card-purple" style={{ padding: "24px 28px", marginBottom: "12px", borderRadius: "10px" }}>
               <h3 style={{ color: "#c4b5fd", fontWeight: 600, marginBottom: "10px", fontSize: "1rem" }}>{item.name}</h3>
               <p style={{ color: "rgba(245,240,255,0.7)", lineHeight: 1.7, fontSize: "0.95rem" }}>{item.acceptedAnswer.text}</p>
             </div>
@@ -193,12 +332,18 @@ export default function ConferenciasPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: "80px 24px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#f5f0ff", marginBottom: "16px" }}>
-          ¿Lista para llevar esta experiencia a tu evento?
+      <section style={{ padding: "80px 24px", textAlign: "center", borderTop: "1px solid rgba(124,58,237,0.15)" }}>
+        <div style={{ color: "#a78bfa", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "16px" }}>
+          Contratación
+        </div>
+        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", fontWeight: 700, color: "#f5f0ff", marginBottom: "12px" }}>
+          Conocimiento para decidir.<br />
+          <span style={{ background: "linear-gradient(135deg, #a78bfa, #c4b5fd)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+            Experiencia para construir. Conciencia para transformar.
+          </span>
         </h2>
-        <p style={{ color: "rgba(245,240,255,0.65)", marginBottom: "32px" }}>
-          Escríbenos y en 24 horas te respondemos con disponibilidad y propuesta.
+        <p style={{ color: "rgba(245,240,255,0.65)", marginBottom: "36px", fontSize: "1rem", maxWidth: "520px", margin: "0 auto 36px" }}>
+          Escríbeme para recibir información sobre disponibilidad, contenidos y cotización para tu evento.
         </p>
         <Link href="/contacto" className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
           Solicitar información <ArrowRight size={16} />
