@@ -237,8 +237,8 @@ export default function ConferenciasPage() {
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", color: "#f5f0ff", marginBottom: "12px" }}>
               Conocimiento y experiencia para cada desafío
             </h2>
-            <p style={{ color: "rgba(245,240,255,0.55)", fontSize: "0.95rem", maxWidth: "560px", margin: "0 auto" }}>
-              Ocho áreas que permiten a presidentes municipales, rectores, empresarios y organizadores de eventos encontrar contenidos alineados con sus necesidades.
+            <p style={{ color: "rgba(245,240,255,0.55)", fontSize: "0.95rem", maxWidth: "620px", margin: "0 auto" }}>
+              Ocho áreas de especialización diseñadas para fortalecer las capacidades de personas, equipos, empresas, instituciones educativas, entidades gubernamentales y organizaciones de la sociedad civil, mediante conocimiento estratégico, herramientas prácticas y soluciones alineadas con los desafíos de cada sector.
             </p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "16px" }}>
