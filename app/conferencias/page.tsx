@@ -30,7 +30,7 @@ const faqSchema = {
       name: "¿Cuáles son los temas de conferencia de Miriam Tenorio Velazco?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sus temas incluyen: transformación personal desde el fondo, emprendimiento femenino, resiliencia y fe, liderazgo auténtico, cómo volver a empezar, y el poder de las decisiones difíciles.",
+        text: "Sus temas incluyen: transformación personal desde el fondo, emprendimiento femenino, resiliencia y fe, liderazgo auténtico, cómo volver a empezar, el poder de las decisiones difíciles, políticas públicas, desarrollo social, desarrollo económico y gestión pública.",
       },
     },
     {
@@ -76,6 +76,14 @@ const temas = [
     desc: "Los mejores líderes no lideran desde la perfección, sino desde la verdad. Cómo construir equipos, familias y organizaciones basadas en la confianza y la vulnerabilidad estratégica.",
     duracion: "45-60 min",
     para: "Eventos ejecutivos, líderes de equipos, directivos",
+  },
+  {
+    icon: <Mic size={32} color="#a78bfa" />,
+    titulo: "Políticas Públicas y Desarrollo Social",
+    subtitulo: "Gestión pública",
+    desc: "Desde la experiencia directiva en gobierno estatal y municipal, Miriam comparte una visión práctica sobre gestión pública, desarrollo económico, políticas sociales y el papel del liderazgo institucional en la transformación comunitaria.",
+    duracion: "45-90 min",
+    para: "Foros de gobierno, universidades, congresos de administración pública, cámaras empresariales",
   },
 ];
 
