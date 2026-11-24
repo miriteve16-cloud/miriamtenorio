@@ -63,8 +63,8 @@ const faqSchema = {
 const areas = [
   {
     num: "01",
-    titulo: "Administración pública y gobernanza",
-    desc: "Políticas públicas, gestión gubernamental, valor público, transparencia y profesionalización institucional.",
+    titulo: "Administración pública, gobernanza y políticas públicas",
+    desc: "Planeación estratégica gubernamental, diseño y evaluación de políticas públicas, gestión orientada a resultados, generación de valor público, administración de recursos, transparencia, rendición de cuentas, innovación gubernamental y profesionalización del servicio público.",
   },
   {
     num: "02",
